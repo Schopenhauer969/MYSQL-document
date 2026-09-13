@@ -1,60 +1,73 @@
 # MySQL — Beginner to Advanced
 
-> A complete MySQL learning guide from **Beginner → Intermediate → Advanced**, with English + Khmer explanations and practical SQL examples.
+A complete **MySQL learning guide from beginner to advanced**, including SQL syntax, database design, relationships, joins, indexes, transactions, stored procedures, functions, triggers, views, CTEs, JSON, optimization, security, backup, and real-world projects.
+
+> **Language:** English + Khmer
+> **Level:** Beginner → Intermediate → Advanced
+> **Database:** MySQL 8.x
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
-* [1. What is MySQL?](#1-what-is-mysql)
-* [2. Installation](#2-installation)
-* [3. MySQL Concepts](#3-mysql-concepts)
-* [4. Connect to MySQL](#4-connect-to-mysql)
-* [5. Create Database](#5-create-database)
-* [6. Create Table](#6-create-table)
-* [7. Data Types](#7-data-types)
-* [8. INSERT](#8-insert)
-* [9. SELECT](#9-select)
-* [10. WHERE](#10-where)
-* [11. ORDER BY](#11-order-by)
-* [12. LIMIT](#12-limit)
-* [13. UPDATE](#13-update)
-* [14. DELETE](#14-delete)
-* [15. NULL](#15-null)
-* [16. Constraints](#16-constraints)
-* [17. Primary Key](#17-primary-key)
-* [18. Foreign Key](#18-foreign-key)
-* [19. Relationships](#19-relationships)
-* [20. JOIN](#20-join)
-* [21. Aggregate Functions](#21-aggregate-functions)
-* [22. GROUP BY](#22-group-by)
-* [23. HAVING](#23-having)
-* [24. String Functions](#24-string-functions)
-* [25. Date and Time](#25-date-and-time)
-* [26. CASE](#26-case)
-* [27. Subqueries](#27-subqueries)
-* [28. CTE](#28-cte)
-* [29. Views](#29-views)
-* [30. Indexes](#30-indexes)
-* [31. Transactions](#31-transactions)
-* [32. Stored Procedures](#32-stored-procedures)
-* [33. Functions](#33-functions)
-* [34. Triggers](#34-triggers)
-* [35. Events](#35-events)
-* [36. Window Functions](#36-window-functions)
-* [37. JSON](#37-json)
-* [38. Common Table Expressions](#38-common-table-expressions)
-* [39. Recursive CTE](#39-recursive-cte)
-* [40. Query Optimization](#40-query-optimization)
-* [41. EXPLAIN](#41-explain)
-* [42. Normalization](#42-normalization)
-* [43. Security](#43-security)
-* [44. Users and Privileges](#44-users-and-privileges)
-* [45. Backup and Restore](#45-backup-and-restore)
-* [46. Database Design](#46-database-design)
-* [47. Advanced Project](#47-advanced-project)
-* [48. Best Practices](#48-best-practices)
-* [49. SQL Cheat Sheet](#49-sql-cheat-sheet)
+1. [What is MySQL?](#1-what-is-mysql)
+2. [Install MySQL](#2-install-mysql)
+3. [Connect to MySQL](#3-connect-to-mysql)
+4. [MySQL Concepts](#4-mysql-concepts)
+5. [Create Database](#5-create-database)
+6. [Create Table](#6-create-table)
+7. [MySQL Data Types](#7-mysql-data-types)
+8. [Insert Data](#8-insert-data)
+9. [Select Data](#9-select-data)
+10. [Where](#10-where)
+11. [Order By](#11-order-by)
+12. [Limit](#12-limit)
+13. [Update](#13-update)
+14. [Delete](#14-delete)
+15. [NULL](#15-null)
+16. [Constraints](#16-constraints)
+17. [Primary Key](#17-primary-key)
+18. [Foreign Key](#18-foreign-key)
+19. [Relationships](#19-relationships)
+20. [Joins](#20-joins)
+21. [Aggregate Functions](#21-aggregate-functions)
+22. [Group By](#22-group-by)
+23. [Having](#23-having)
+24. [String Functions](#24-string-functions)
+25. [Date and Time](#25-date-and-time)
+26. [CASE](#26-case)
+27. [Subqueries](#27-subqueries)
+28. [Common Table Expressions](#28-common-table-expressions)
+29. [Views](#29-views)
+30. [Indexes](#30-indexes)
+31. [Transactions](#31-transactions)
+32. [Stored Procedures](#32-stored-procedures)
+33. [Stored Functions](#33-stored-functions)
+34. [Triggers](#34-triggers)
+35. [Events](#35-events)
+36. [Window Functions](#36-window-functions)
+37. [JSON](#37-json)
+38. [Recursive CTE](#38-recursive-cte)
+39. [Query Optimization](#39-query-optimization)
+40. [EXPLAIN](#40-explain)
+41. [Database Normalization](#41-database-normalization)
+42. [Users and Privileges](#42-users-and-privileges)
+43. [Security](#43-security)
+44. [Backup and Restore](#44-backup-and-restore)
+45. [Database Design](#45-database-design)
+46. [Advanced Queries](#46-advanced-queries)
+47. [Best Practices](#47-best-practices)
+48. [SQL Cheat Sheet](#48-sql-cheat-sheet)
+49. [Learning Path](#49-learning-path)
+50. [MySQL Mental Model](#50-mysql-mental-model)
+51. [Real-World Architecture](#51-real-world-architecture)
+52. [Production Checklist](#52-production-checklist)
+53. [Environment Variables](#53-environment-variables)
+54. [Project Structure](#54-project-structure)
+55. [Complete E-Commerce Example](#55-complete-e-commerce-example)
+56. [Final Roadmap](#56-final-roadmap)
+57. [Practice Projects](#57-practice-projects)
+58. [Conclusion](#58-conclusion)
 
 ---
 
@@ -62,9 +75,130 @@
 
 ## English
 
-**MySQL** is an open-source relational database management system (RDBMS).
+**MySQL** is an open-source relational database management system.
 
-It stores data inside:
+It stores data inside tables using rows and columns and uses **SQL (Structured Query Language)** to manage that data.
+
+## Khmer
+
+**MySQL** គឺជា Database Management System ប្រភេទ Relational Database ដែលប្រើសម្រាប់រក្សាទុក និងគ្រប់គ្រងទិន្នន័យ។
+
+MySQL ប្រើ **SQL** ដើម្បី:
+
+* Create database
+* Create tables
+* Insert data
+* Read data
+* Update data
+* Delete data
+* Manage relationships
+* Manage users
+* Optimize queries
+
+---
+
+# 2. Install MySQL
+
+## Windows
+
+Download and install MySQL Server and MySQL Workbench.
+
+After installation:
+
+```bash
+mysql --version
+```
+
+Example:
+
+```text
+mysql  Ver 8.0.xx for Win64
+```
+
+## Linux Ubuntu
+
+```bash
+sudo apt update
+sudo apt install mysql-server
+```
+
+Start MySQL:
+
+```bash
+sudo systemctl start mysql
+```
+
+Enable MySQL:
+
+```bash
+sudo systemctl enable mysql
+```
+
+Check status:
+
+```bash
+sudo systemctl status mysql
+```
+
+## macOS
+
+Using Homebrew:
+
+```bash
+brew install mysql
+```
+
+Start:
+
+```bash
+brew services start mysql
+```
+
+Check:
+
+```bash
+mysql --version
+```
+
+---
+
+# 3. Connect to MySQL
+
+```bash
+mysql -u root -p
+```
+
+Enter your password.
+
+You can also specify a host:
+
+```bash
+mysql -h localhost -u root -p
+```
+
+Specify a database:
+
+```bash
+mysql -u root -p my_database
+```
+
+Exit:
+
+```sql
+EXIT;
+```
+
+or:
+
+```sql
+QUIT;
+```
+
+---
+
+# 4. MySQL Concepts
+
+A relational database contains:
 
 ```text
 Database
@@ -79,236 +213,96 @@ Columns
 Example:
 
 ```text
-Database: school
+Database: shop
 
-students
+users
 --------------------------------
-id | name       | age | gender
+id | name | email
 --------------------------------
-1  | Dara       | 20  | Male
-2  | Sreyneang  | 21  | Female
+1  | John | john@gmail.com
+2  | Anna | anna@gmail.com
 ```
-
-## Khmer
-
-**MySQL** គឺជា Database Management System ដែលប្រើសម្រាប់រក្សាទុក និងគ្រប់គ្រងទិន្នន័យ។
-
-ទិន្នន័យត្រូវបានរៀបចំជា៖
-
-```text
-Database
-   ↓
-Table
-   ↓
-Row
-   ↓
-Column
-```
-
-ឧទាហរណ៍៖ Database `school` មាន Table `students`។
-
----
-
-# 2. Installation
-
-You can install MySQL Server and MySQL client tools.
-
-Common tools:
-
-* MySQL Server
-* MySQL Workbench
-* MySQL Shell
-* phpMyAdmin
-* DBeaver
-
-After installation, check:
-
-```bash
-mysql --version
-```
-
-Example:
-
-```text
-mysql  Ver 8.0.x
-```
-
-## Khmer
-
-បន្ទាប់ពី Install MySQL រួច អាចពិនិត្យ Version ដោយ៖
-
-```bash
-mysql --version
-```
-
----
-
-# 3. MySQL Concepts
-
-The most important concepts:
-
-| Concept     | Meaning                      |
-| ----------- | ---------------------------- |
-| Database    | Container for tables         |
-| Table       | Stores structured data       |
-| Row         | One record                   |
-| Column      | One attribute                |
-| Primary Key | Unique identifier            |
-| Foreign Key | Connects tables              |
-| Index       | Improves searching           |
-| Query       | SQL command                  |
-| Transaction | Group of database operations |
 
 ## Khmer
 
 * **Database** = កន្លែងផ្ទុក Tables
-* **Table** = កន្លែងផ្ទុកទិន្នន័យ
-* **Row** = ទិន្នន័យមួយ Record
-* **Column** = ប្រភេទព័ត៌មានមួយ
-* **Primary Key** = ID មិនស្ទួន
-* **Foreign Key** = ភ្ជាប់ Tables
-* **Index** = ជួយឲ្យ Search លឿន
-* **Transaction** = ក្រុមការងារ Database ដែលត្រូវធ្វើជាមួយគ្នា
-
----
-
-# 4. Connect to MySQL
-
-Open terminal:
-
-```bash
-mysql -u root -p
-```
-
-Then enter your password.
-
-Connect to a specific host:
-
-```bash
-mysql -h localhost -u root -p
-```
-
-Connect to a database:
-
-```bash
-mysql -u root -p database_name
-```
-
-## Khmer
-
-```bash
-mysql -u root -p
-```
-
-មានន័យថា៖
-
-* `-u` = username
-* `root` = MySQL user
-* `-p` = password
+* **Table** = តារាងទិន្នន័យ
+* **Row** = ទិន្នន័យមួយ record
+* **Column** = Field / Attribute
 
 ---
 
 # 5. Create Database
 
-## Create
+Create:
 
 ```sql
-CREATE DATABASE school;
+CREATE DATABASE shop;
 ```
 
-## Create safely
+Create only if it does not exist:
 
 ```sql
-CREATE DATABASE IF NOT EXISTS school;
+CREATE DATABASE IF NOT EXISTS shop;
 ```
 
-## Show databases
-
-```sql
-SHOW DATABASES;
-```
-
-## Select database
-
-```sql
-USE school;
-```
-
-## Delete database
-
-```sql
-DROP DATABASE school;
-```
-
-## Khmer
-
-បង្កើត Database៖
-
-```sql
-CREATE DATABASE school;
-```
-
-ប្រើ Database៖
-
-```sql
-USE school;
-```
-
-មើល Database ទាំងអស់៖
+Show databases:
 
 ```sql
 SHOW DATABASES;
 ```
 
-> ⚠️ `DROP DATABASE` នឹងលុប Database ទាំងមូល។
+Use database:
+
+```sql
+USE shop;
+```
+
+Delete database:
+
+```sql
+DROP DATABASE shop;
+```
+
+> Be careful: `DROP DATABASE` permanently removes the database.
 
 ---
 
 # 6. Create Table
 
-Create a simple table:
+Example:
 
 ```sql
-CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
     age INT,
-    gender VARCHAR(20)
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
-Check tables:
+Show tables:
 
 ```sql
 SHOW TABLES;
 ```
 
-Check table structure:
+Describe table:
 
 ```sql
-DESCRIBE students;
+DESCRIBE users;
 ```
 
 Alternative:
 
 ```sql
-SHOW CREATE TABLE students;
-```
-
-## Khmer
-
-Table `students` មាន៖
-
-```text
-id      → លេខសម្គាល់
-name    → ឈ្មោះ
-age     → អាយុ
-gender  → ភេទ
+DESC users;
 ```
 
 ---
 
-# 7. Data Types
+# 7. MySQL Data Types
 
 ## Numeric
 
@@ -324,7 +318,12 @@ Example:
 
 ```sql
 price DECIMAL(10,2)
-quantity INT
+```
+
+For money, prefer:
+
+```sql
+DECIMAL(10,2)
 ```
 
 ## String
@@ -333,6 +332,7 @@ quantity INT
 CHAR(10)
 VARCHAR(255)
 TEXT
+LONGTEXT
 ```
 
 Example:
@@ -355,110 +355,94 @@ YEAR
 Example:
 
 ```sql
-birth_date DATE
-created_at DATETIME
+created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ```
 
 ## Boolean
 
-MySQL commonly represents Boolean values using `BOOLEAN` / `BOOL`, which behave as numeric types:
+MySQL supports:
 
 ```sql
-is_active BOOLEAN
+BOOLEAN
 ```
 
-Typically:
-
-```text
-0 = FALSE
-1 = TRUE
-```
-
-## Khmer
-
-Data Type គឺកំណត់ថា Column មួយអាចរក្សាទុកទិន្នន័យប្រភេទអ្វី។
-
-ឧទាហរណ៍៖
+It is effectively stored as a numeric type:
 
 ```sql
-name VARCHAR(100)
-age INT
-price DECIMAL(10,2)
-birth_date DATE
+is_active BOOLEAN DEFAULT TRUE
 ```
 
 ---
 
-# 8. INSERT
+# 8. Insert Data
 
-Insert one record:
+Insert one row:
 
 ```sql
-INSERT INTO students (name, age, gender)
-VALUES ('Dara', 20, 'Male');
+INSERT INTO users (name, email, age)
+VALUES ('John', 'john@gmail.com', 25);
 ```
 
-Insert multiple records:
+Insert multiple rows:
 
 ```sql
-INSERT INTO students (name, age, gender)
+INSERT INTO users (name, email, age)
 VALUES
-    ('Dara', 20, 'Male'),
-    ('Sokha', 21, 'Male'),
-    ('Sreyneang', 22, 'Female'),
-    ('Bopha', 19, 'Female');
+    ('John', 'john@gmail.com', 25),
+    ('Anna', 'anna@gmail.com', 22),
+    ('David', 'david@gmail.com', 30);
 ```
 
-Check:
+Insert without specifying the auto-increment ID:
 
 ```sql
-SELECT * FROM students;
+INSERT INTO users (name, email)
+VALUES ('Dara', 'dara@gmail.com');
 ```
-
-## Khmer
-
-`INSERT` ប្រើសម្រាប់បញ្ចូលទិន្នន័យថ្មី។
 
 ---
 
-# 9. SELECT
+# 9. Select Data
 
 Select everything:
 
 ```sql
 SELECT *
-FROM students;
+FROM users;
 ```
 
 Select specific columns:
 
 ```sql
-SELECT id, name, age
-FROM students;
+SELECT id, name, email
+FROM users;
 ```
 
-Rename column:
+Alias:
 
 ```sql
 SELECT
-    name AS student_name,
-    age AS student_age
-FROM students;
+    name AS username,
+    email AS user_email
+FROM users;
 ```
 
-## Khmer
+Distinct:
 
-`SELECT` ប្រើសម្រាប់យកទិន្នន័យចេញពី Database។
+```sql
+SELECT DISTINCT age
+FROM users;
+```
 
 ---
 
 # 10. WHERE
 
-Find students older than 20:
+Find users older than 20:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 WHERE age > 20;
 ```
 
@@ -466,71 +450,83 @@ Equal:
 
 ```sql
 SELECT *
-FROM students
-WHERE gender = 'Male';
+FROM users
+WHERE age = 25;
+```
+
+Not equal:
+
+```sql
+SELECT *
+FROM users
+WHERE age <> 25;
 ```
 
 Multiple conditions:
 
 ```sql
 SELECT *
-FROM students
-WHERE age >= 20
-  AND gender = 'Male';
+FROM users
+WHERE age >= 18
+AND age <= 30;
 ```
 
 OR:
 
 ```sql
 SELECT *
-FROM students
-WHERE age >= 20
-   OR gender = 'Female';
-```
-
-NOT:
-
-```sql
-SELECT *
-FROM students
-WHERE NOT gender = 'Male';
-```
-
-BETWEEN:
-
-```sql
-SELECT *
-FROM students
-WHERE age BETWEEN 20 AND 25;
+FROM users
+WHERE age = 20
+OR age = 25;
 ```
 
 IN:
 
 ```sql
 SELECT *
-FROM students
-WHERE gender IN ('Male', 'Female');
+FROM users
+WHERE age IN (20, 25, 30);
+```
+
+BETWEEN:
+
+```sql
+SELECT *
+FROM users
+WHERE age BETWEEN 20 AND 30;
 ```
 
 LIKE:
 
 ```sql
 SELECT *
-FROM students
-WHERE name LIKE 'D%';
+FROM users
+WHERE name LIKE 'J%';
 ```
 
-Meaning:
+Starts with J:
 
 ```text
-D%   → starts with D
-%D   → ends with D
-%D%  → contains D
+John
+James
+Jason
 ```
 
-## Khmer
+Ends with n:
 
-`WHERE` ប្រើសម្រាប់ Filter ទិន្នន័យ។
+```sql
+SELECT *
+FROM users
+WHERE name LIKE '%n';
+```
+
+Contains "oh":
+
+```sql
+SELECT *
+FROM users
+WHERE name LIKE '%oh%';
+```
 
 ---
 
@@ -540,7 +536,7 @@ Ascending:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 ORDER BY age ASC;
 ```
 
@@ -548,7 +544,7 @@ Descending:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 ORDER BY age DESC;
 ```
 
@@ -556,127 +552,127 @@ Multiple columns:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 ORDER BY age DESC, name ASC;
-```
-
-## Khmer
-
-`ORDER BY` ប្រើសម្រាប់តម្រៀបទិន្នន័យ។
-
-```text
-ASC  = តូច → ធំ
-DESC = ធំ → តូច
 ```
 
 ---
 
 # 12. LIMIT
 
-Get first 5 rows:
+Get first 10 records:
 
 ```sql
 SELECT *
-FROM students
-LIMIT 5;
+FROM users
+LIMIT 10;
 ```
 
 Pagination:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 LIMIT 10 OFFSET 20;
 ```
 
-This means:
+Equivalent:
 
-```text
-Skip 20 rows
-Get 10 rows
+```sql
+SELECT *
+FROM users
+LIMIT 20, 10;
 ```
 
-## Khmer
+Meaning:
 
-`LIMIT` ប្រើសម្រាប់កំណត់ចំនួន Row ដែលចង់បាន។
+```text
+Skip 20
+Take 10
+```
 
 ---
 
-# 13. UPDATE
+# 13. Update
 
-Update one student:
+Update one record:
 
 ```sql
-UPDATE students
-SET age = 21
+UPDATE users
+SET age = 26
 WHERE id = 1;
 ```
 
 Update multiple columns:
 
 ```sql
-UPDATE students
+UPDATE users
 SET
-    age = 22,
-    gender = 'Male'
+    name = 'John Doe',
+    age = 27
 WHERE id = 1;
 ```
 
-> ⚠️ Always use `WHERE` when updating specific records.
-
-Dangerous:
+Update multiple records:
 
 ```sql
-UPDATE students
-SET age = 25;
+UPDATE users
+SET age = age + 1
+WHERE age >= 18;
 ```
 
-This updates **every row**.
-
-## Khmer
-
-`UPDATE` ប្រើសម្រាប់កែប្រែទិន្នន័យ។
-
-ត្រូវប្រយ័ត្ន៖
-
-```sql
-UPDATE students
-SET age = 25;
-```
-
-នឹងកែ `age` របស់ Student ទាំងអស់។
+> Always be careful with `UPDATE` without `WHERE`.
 
 ---
 
-# 14. DELETE
+# 14. Delete
 
 Delete one record:
 
 ```sql
-DELETE FROM students
+DELETE FROM users
 WHERE id = 1;
 ```
 
-Delete records matching condition:
+Delete records:
 
 ```sql
-DELETE FROM students
+DELETE FROM users
 WHERE age < 18;
 ```
 
 Delete all rows:
 
 ```sql
-DELETE FROM students;
+DELETE FROM users;
 ```
 
-> ⚠️ `DELETE FROM students;` deletes all rows.
+Remove table:
 
-## Khmer
+```sql
+DROP TABLE users;
+```
 
-`DELETE` ប្រើសម្រាប់លុបទិន្នន័យ។
+Remove all rows quickly:
 
-ត្រូវប្រយ័ត្ន `DELETE` ដោយគ្មាន `WHERE`។
+```sql
+TRUNCATE TABLE users;
+```
+
+### Difference
+
+```text
+DELETE
+→ Removes rows
+→ Can use WHERE
+
+TRUNCATE
+→ Removes all rows
+→ Faster for clearing a table
+
+DROP
+→ Removes the entire table
+```
 
 ---
 
@@ -686,7 +682,7 @@ Find NULL:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 WHERE age IS NULL;
 ```
 
@@ -694,38 +690,36 @@ Find NOT NULL:
 
 ```sql
 SELECT *
-FROM students
+FROM users
 WHERE age IS NOT NULL;
 ```
 
-Do not use:
+Wrong:
 
 ```sql
-WHERE age = NULL;
+WHERE age = NULL
 ```
 
 Correct:
 
 ```sql
-WHERE age IS NULL;
+WHERE age IS NULL
 ```
 
-## COALESCE
+Use `COALESCE`:
 
 ```sql
 SELECT
     name,
     COALESCE(age, 0) AS age
-FROM students;
+FROM users;
 ```
-
-## Khmer
-
-`NULL` មានន័យថា **គ្មានតម្លៃ / Unknown value**។
 
 ---
 
 # 16. Constraints
+
+Constraints protect data integrity.
 
 Common constraints:
 
@@ -742,111 +736,85 @@ Example:
 
 ```sql
 CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
 
-    username VARCHAR(100) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL UNIQUE,
 
-    email VARCHAR(255) NOT NULL UNIQUE,
+    age INT CHECK (age >= 0),
 
-    age INT CHECK (age >= 18),
-
-    status VARCHAR(20) DEFAULT 'active'
+    is_active BOOLEAN DEFAULT TRUE
 );
 ```
-
-## Khmer
-
-Constraint ជាច្បាប់ដែលកំណត់លើ Data ដើម្បីការពារ Data មិនឲ្យខុស។
 
 ---
 
 # 17. Primary Key
 
+A primary key uniquely identifies a row.
+
 Example:
 
 ```sql
 CREATE TABLE products (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
     price DECIMAL(10,2) NOT NULL
 );
 ```
 
-Primary Key must be:
-
-* Unique
-* Not NULL
-* Used to identify a row
-
-## Khmer
-
-`PRIMARY KEY` គឺជា ID សម្រាប់សម្គាល់ Record មួយៗ។
-
-ឧទាហរណ៍៖
+Primary key properties:
 
 ```text
-id = 1
-id = 2
-id = 3
+Unique
+Not NULL
+Identifies one row
 ```
-
-មិនអាចស្ទួនគ្នា។
 
 ---
 
 # 18. Foreign Key
 
-Create parent table:
+A foreign key creates a relationship between tables.
+
+Parent table:
 
 ```sql
-CREATE TABLE departments (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE categories (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL
 );
 ```
 
-Create child table:
+Child table:
 
 ```sql
-CREATE TABLE employees (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    department_id INT,
+    category_id INT,
 
-    FOREIGN KEY (department_id)
-        REFERENCES departments(id)
+    CONSTRAINT fk_product_category
+        FOREIGN KEY (category_id)
+        REFERENCES categories(id)
 );
 ```
 
 Insert:
 
 ```sql
-INSERT INTO departments (name)
+INSERT INTO categories (name)
 VALUES
-    ('IT'),
-    ('HR'),
-    ('Finance');
+    ('Laptop'),
+    ('Phone');
 ```
+
+Insert product:
 
 ```sql
-INSERT INTO employees (name, department_id)
+INSERT INTO products (name, category_id)
 VALUES
-    ('Dara', 1),
-    ('Sokha', 1),
-    ('Bopha', 2);
-```
-
-## Khmer
-
-`FOREIGN KEY` ប្រើសម្រាប់ភ្ជាប់ Table មួយទៅ Table មួយ។
-
-```text
-departments
-     ↑
-     |
-department_id
-     |
-employees
+    ('MacBook', 1),
+    ('iPhone', 2);
 ```
 
 ---
@@ -855,58 +823,45 @@ employees
 
 ## One-to-One
 
-One user has one profile.
-
 ```text
-users
-  1
+User
   |
-  1
-profiles
+  | 1
+  |
+  | 1
+Profile
 ```
 
 ## One-to-Many
 
-One department has many employees.
-
 ```text
-departments
-     1
-     |
-     |
-     N
-employees
+Category
+   |
+   | 1
+   |
+   | N
+Products
 ```
+
+One category can have many products.
 
 ## Many-to-Many
 
-Students can take many courses, and courses can have many students.
-
-Use a junction table:
+Example:
 
 ```text
-students
+Students
    |
    |
 student_courses
    |
    |
-courses
+Courses
 ```
 
-Example:
+Junction table:
 
 ```sql
-CREATE TABLE students (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE courses (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL
-);
-
 CREATE TABLE student_courses (
     student_id INT NOT NULL,
     course_id INT NOT NULL,
@@ -923,110 +878,91 @@ CREATE TABLE student_courses (
 
 ---
 
-# 20. JOIN
-
-Create example data:
-
-```sql
-CREATE TABLE customers (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE orders (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    customer_id INT NOT NULL,
-    total DECIMAL(10,2) NOT NULL,
-
-    FOREIGN KEY (customer_id)
-        REFERENCES customers(id)
-);
-```
-
-Insert:
-
-```sql
-INSERT INTO customers (name)
-VALUES
-    ('Dara'),
-    ('Sokha'),
-    ('Bopha');
-```
-
-```sql
-INSERT INTO orders (customer_id, total)
-VALUES
-    (1, 100.00),
-    (1, 250.00),
-    (2, 75.00);
-```
+# 20. Joins
 
 ## INNER JOIN
 
+Returns matching records.
+
 ```sql
 SELECT
-    customers.name,
-    orders.total
-FROM customers
-INNER JOIN orders
-    ON customers.id = orders.customer_id;
+    products.id,
+    products.name,
+    categories.name AS category
+FROM products
+INNER JOIN categories
+    ON products.category_id = categories.id;
 ```
-
-Returns only matching records.
 
 ## LEFT JOIN
 
+Returns all rows from the left table.
+
 ```sql
 SELECT
-    customers.name,
-    orders.total
-FROM customers
-LEFT JOIN orders
-    ON customers.id = orders.customer_id;
+    categories.name,
+    products.name
+FROM categories
+LEFT JOIN products
+    ON products.category_id = categories.id;
 ```
-
-Returns all customers, including customers without orders.
 
 ## RIGHT JOIN
 
 ```sql
 SELECT
-    customers.name,
-    orders.total
-FROM customers
-RIGHT JOIN orders
-    ON customers.id = orders.customer_id;
+    categories.name,
+    products.name
+FROM products
+RIGHT JOIN categories
+    ON products.category_id = categories.id;
 ```
 
 ## CROSS JOIN
 
+Creates a Cartesian product.
+
 ```sql
 SELECT
-    customers.name,
-    orders.total
-FROM customers
-CROSS JOIN orders;
+    users.name,
+    categories.name
+FROM users
+CROSS JOIN categories;
 ```
 
-## Khmer
+## Self JOIN
 
-JOIN ប្រើសម្រាប់យក Data ពី Table ច្រើនមកភ្ជាប់គ្នា។
+Example employee hierarchy:
 
-សំខាន់បំផុត៖
+```sql
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    manager_id INT NULL,
 
-```text
-INNER JOIN → តែ Data ដែល Match
-LEFT JOIN  → Data ខាងឆ្វេងទាំងអស់
-RIGHT JOIN → Data ខាងស្តាំទាំងអស់
+    FOREIGN KEY (manager_id)
+        REFERENCES employees(id)
+);
+```
+
+Query:
+
+```sql
+SELECT
+    employee.name AS employee,
+    manager.name AS manager
+FROM employees employee
+LEFT JOIN employees manager
+    ON employee.manager_id = manager.id;
 ```
 
 ---
 
 # 21. Aggregate Functions
 
-Common functions:
+Common aggregate functions:
 
-```sql
+```text
 COUNT()
 SUM()
 AVG()
@@ -1037,157 +973,171 @@ MAX()
 Count:
 
 ```sql
-SELECT COUNT(*) AS total_students
-FROM students;
+SELECT COUNT(*) AS total_users
+FROM users;
 ```
 
 Sum:
 
 ```sql
-SELECT SUM(total) AS total_sales
-FROM orders;
+SELECT SUM(price) AS total_price
+FROM products;
 ```
 
 Average:
 
 ```sql
-SELECT AVG(total) AS average_order
-FROM orders;
+SELECT AVG(price) AS average_price
+FROM products;
 ```
 
 Minimum:
 
 ```sql
-SELECT MIN(total) AS minimum_order
-FROM orders;
+SELECT MIN(price)
+FROM products;
 ```
 
 Maximum:
 
 ```sql
-SELECT MAX(total) AS maximum_order
-FROM orders;
+SELECT MAX(price)
+FROM products;
 ```
 
-## Khmer
+Multiple:
 
-Aggregate Functions ប្រើសម្រាប់គណនា Data ច្រើន Row។
+```sql
+SELECT
+    COUNT(*) AS total_products,
+    SUM(price) AS total_price,
+    AVG(price) AS average_price,
+    MIN(price) AS cheapest,
+    MAX(price) AS most_expensive
+FROM products;
+```
 
 ---
 
 # 22. GROUP BY
 
-Total orders by customer:
+Group products by category:
 
 ```sql
 SELECT
-    customer_id,
-    COUNT(*) AS order_count,
-    SUM(total) AS total_spent
-FROM orders
-GROUP BY customer_id;
+    category_id,
+    COUNT(*) AS total_products
+FROM products
+GROUP BY category_id;
 ```
 
-Join with customer name:
+With SUM:
 
 ```sql
 SELECT
-    c.name,
-    COUNT(o.id) AS order_count,
-    COALESCE(SUM(o.total), 0) AS total_spent
-FROM customers c
-LEFT JOIN orders o
-    ON c.id = o.customer_id
-GROUP BY c.id, c.name;
+    category_id,
+    SUM(price) AS total_price
+FROM products
+GROUP BY category_id;
 ```
 
-## Khmer
+With JOIN:
 
-`GROUP BY` ប្រើសម្រាប់បែងចែក Data ជាក្រុម។
+```sql
+SELECT
+    categories.name,
+    COUNT(products.id) AS total_products
+FROM categories
+LEFT JOIN products
+    ON products.category_id = categories.id
+GROUP BY categories.id, categories.name;
+```
 
 ---
 
 # 23. HAVING
 
-Find customers whose total spending is greater than 200:
+`WHERE` filters rows.
+
+`HAVING` filters groups.
+
+Example:
 
 ```sql
 SELECT
-    customer_id,
-    SUM(total) AS total_spent
-FROM orders
-GROUP BY customer_id
-HAVING SUM(total) > 200;
+    category_id,
+    COUNT(*) AS total_products
+FROM products
+GROUP BY category_id
+HAVING COUNT(*) > 5;
 ```
 
-Difference:
+Combined:
 
-```text
-WHERE  → filters rows before grouping
-HAVING → filters groups after grouping
+```sql
+SELECT
+    category_id,
+    AVG(price) AS average_price
+FROM products
+WHERE price > 10
+GROUP BY category_id
+HAVING AVG(price) > 100;
 ```
 
 ---
 
 # 24. String Functions
 
-## CONCAT
-
-```sql
-SELECT CONCAT('Hello ', 'World') AS message;
-```
-
-## UPPER
+Uppercase:
 
 ```sql
 SELECT UPPER(name)
-FROM students;
+FROM users;
 ```
 
-## LOWER
+Lowercase:
 
 ```sql
 SELECT LOWER(name)
-FROM students;
+FROM users;
 ```
 
-## LENGTH
+Length:
 
 ```sql
 SELECT
     name,
     LENGTH(name) AS name_length
-FROM students;
+FROM users;
 ```
 
-## TRIM
+Concatenate:
 
 ```sql
-SELECT TRIM('   Hello   ');
+SELECT
+    CONCAT(name, ' - ', email) AS user_info
+FROM users;
 ```
 
-## SUBSTRING
+Trim:
 
 ```sql
-SELECT SUBSTRING('Database', 1, 4);
+SELECT TRIM(name)
+FROM users;
 ```
 
-Result:
-
-```text
-Data
-```
-
-## REPLACE
+Replace:
 
 ```sql
-SELECT REPLACE('Hello World', 'World', 'MySQL');
+SELECT REPLACE(name, 'John', 'Johnny')
+FROM users;
 ```
 
-Result:
+Substring:
 
-```text
-Hello MySQL
+```sql
+SELECT SUBSTRING(name, 1, 3)
+FROM users;
 ```
 
 ---
@@ -1206,59 +1156,73 @@ Current time:
 SELECT CURTIME();
 ```
 
-Current datetime:
+Current date and time:
 
 ```sql
 SELECT NOW();
 ```
 
+Insert timestamp:
+
+```sql
+INSERT INTO users (
+    name,
+    email,
+    created_at
+)
+VALUES (
+    'John',
+    'john@gmail.com',
+    NOW()
+);
+```
+
 Extract year:
 
 ```sql
-SELECT YEAR(NOW());
+SELECT YEAR(created_at)
+FROM users;
 ```
 
 Extract month:
 
 ```sql
-SELECT MONTH(NOW());
+SELECT MONTH(created_at)
+FROM users;
 ```
 
-Add days:
+Extract day:
 
 ```sql
-SELECT DATE_ADD(CURDATE(), INTERVAL 7 DAY);
-```
-
-Subtract days:
-
-```sql
-SELECT DATE_SUB(CURDATE(), INTERVAL 7 DAY);
+SELECT DAY(created_at)
+FROM users;
 ```
 
 Date difference:
 
 ```sql
-SELECT DATEDIFF('2026-12-31', '2026-01-01');
+SELECT
+    DATEDIFF(CURDATE(), created_at) AS days_old
+FROM users;
 ```
 
-Example:
+Add days:
 
 ```sql
-SELECT *
-FROM orders
-WHERE created_at >= CURDATE() - INTERVAL 7 DAY;
+SELECT DATE_ADD(NOW(), INTERVAL 7 DAY);
 ```
 
-## Khmer
+Subtract days:
 
-MySQL មាន Function ជាច្រើនសម្រាប់គ្រប់គ្រង Date និង Time។
+```sql
+SELECT DATE_SUB(NOW(), INTERVAL 7 DAY);
+```
 
 ---
 
 # 26. CASE
 
-Example:
+Simple CASE:
 
 ```sql
 SELECT
@@ -1266,215 +1230,199 @@ SELECT
     age,
     CASE
         WHEN age < 18 THEN 'Minor'
-        WHEN age BETWEEN 18 AND 59 THEN 'Adult'
+        WHEN age >= 18 AND age < 60 THEN 'Adult'
         ELSE 'Senior'
     END AS age_group
-FROM students;
+FROM users;
 ```
 
-Another example:
+Product price classification:
 
 ```sql
 SELECT
-    id,
-    total,
+    name,
+    price,
     CASE
-        WHEN total >= 500 THEN 'High'
-        WHEN total >= 200 THEN 'Medium'
-        ELSE 'Low'
-    END AS order_level
-FROM orders;
+        WHEN price < 50 THEN 'Cheap'
+        WHEN price < 500 THEN 'Medium'
+        ELSE 'Expensive'
+    END AS price_category
+FROM products;
 ```
-
-## Khmer
-
-`CASE` មានអារម្មណ៍ដូចជា `if / else if / else`។
 
 ---
 
 # 27. Subqueries
 
-Find orders greater than the average order:
+Find products more expensive than average:
 
 ```sql
 SELECT *
-FROM orders
-WHERE total > (
-    SELECT AVG(total)
-    FROM orders
+FROM products
+WHERE price > (
+    SELECT AVG(price)
+    FROM products
 );
 ```
 
-Subquery with IN:
+Subquery with `IN`:
 
 ```sql
 SELECT *
-FROM employees
-WHERE department_id IN (
+FROM products
+WHERE category_id IN (
     SELECT id
-    FROM departments
-    WHERE name = 'IT'
+    FROM categories
+    WHERE name IN ('Laptop', 'Phone')
 );
 ```
 
-## Khmer
+`EXISTS`:
 
-Subquery គឺ Query មួយនៅក្នុង Query មួយទៀត។
+```sql
+SELECT *
+FROM categories c
+WHERE EXISTS (
+    SELECT 1
+    FROM products p
+    WHERE p.category_id = c.id
+);
+```
 
 ---
 
-# 28. CTE
+# 28. Common Table Expressions
 
-CTE means **Common Table Expression**.
-
-Example:
+A CTE makes complex queries easier to read.
 
 ```sql
-WITH customer_totals AS (
-    SELECT
-        customer_id,
-        SUM(total) AS total_spent
-    FROM orders
-    GROUP BY customer_id
+WITH expensive_products AS (
+    SELECT *
+    FROM products
+    WHERE price > 500
 )
 SELECT *
-FROM customer_totals
-WHERE total_spent > 200;
+FROM expensive_products;
 ```
 
 Multiple CTEs:
 
 ```sql
 WITH
-customer_totals AS (
+product_stats AS (
     SELECT
-        customer_id,
-        SUM(total) AS total_spent
-    FROM orders
-    GROUP BY customer_id
+        category_id,
+        COUNT(*) AS total_products,
+        AVG(price) AS average_price
+    FROM products
+    GROUP BY category_id
 ),
-large_customers AS (
+expensive_categories AS (
     SELECT *
-    FROM customer_totals
-    WHERE total_spent > 200
+    FROM product_stats
+    WHERE average_price > 500
 )
 SELECT *
-FROM large_customers;
+FROM expensive_categories;
 ```
-
-## Khmer
-
-CTE ធ្វើឲ្យ Query ធំៗ អានងាយ និងរៀបចំ Logic បានល្អ។
 
 ---
 
 # 29. Views
 
+A view is a saved query.
+
 Create:
 
 ```sql
-CREATE VIEW customer_order_summary AS
+CREATE VIEW product_category_view AS
 SELECT
-    c.id,
-    c.name,
-    COUNT(o.id) AS order_count,
-    COALESCE(SUM(o.total), 0) AS total_spent
-FROM customers c
-LEFT JOIN orders o
-    ON c.id = o.customer_id
-GROUP BY c.id, c.name;
+    products.id,
+    products.name AS product_name,
+    products.price,
+    categories.name AS category_name
+FROM products
+INNER JOIN categories
+    ON products.category_id = categories.id;
 ```
 
 Use:
 
 ```sql
 SELECT *
-FROM customer_order_summary;
+FROM product_category_view;
 ```
 
-Delete:
+Drop:
 
 ```sql
-DROP VIEW customer_order_summary;
+DROP VIEW product_category_view;
 ```
-
-## Khmer
-
-`VIEW` គឺជា Virtual Table ដែលផ្អែកលើ Query។
-
-វាមានប្រយោជន៍ពេល Query ដដែលត្រូវប្រើញឹកញាប់។
 
 ---
 
 # 30. Indexes
 
-Indexes improve data lookup performance.
+Indexes improve search performance.
 
 Create:
 
 ```sql
-CREATE INDEX idx_students_name
-ON students(name);
+CREATE INDEX idx_users_email
+ON users(email);
 ```
 
-Multiple columns:
+Multiple-column index:
 
 ```sql
-CREATE INDEX idx_students_gender_age
-ON students(gender, age);
+CREATE INDEX idx_products_category_price
+ON products(category_id, price);
 ```
 
 Unique index:
 
 ```sql
-CREATE UNIQUE INDEX idx_users_email
-ON users(email);
+CREATE UNIQUE INDEX idx_users_username
+ON users(username);
 ```
 
 Show indexes:
 
 ```sql
-SHOW INDEX FROM students;
+SHOW INDEX FROM users;
 ```
 
-Delete index:
+Drop:
 
 ```sql
-DROP INDEX idx_students_name
-ON students;
+DROP INDEX idx_users_email
+ON users;
 ```
 
 ## Important
 
+Indexes improve reads but can increase:
+
+```text
+INSERT cost
+UPDATE cost
+DELETE cost
+Storage usage
+```
+
 Do not create indexes on every column.
-
-Indexes can:
-
-```text
-SELECT faster
-```
-
-but can make:
-
-```text
-INSERT
-UPDATE
-DELETE
-```
-
-more expensive because indexes also need maintenance.
-
-## Khmer
-
-Index ដូចជា Index ក្នុងសៀវភៅ។
-
-វាជួយឲ្យ Search លឿន ប៉ុន្តែ Index ច្រើនពេកអាចធ្វើឲ្យ Insert/Update/Delete យឺត។
 
 ---
 
 # 31. Transactions
 
-Transactions are used when multiple operations must succeed or fail together.
+Transactions allow multiple operations to behave as one unit.
+
+Start:
+
+```sql
+START TRANSACTION;
+```
 
 Example:
 
@@ -1492,28 +1440,7 @@ WHERE id = 2;
 COMMIT;
 ```
 
-If something goes wrong:
-
-```sql
-ROLLBACK;
-```
-
-Full example:
-
-```sql
-CREATE TABLE accounts (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    balance DECIMAL(12,2) NOT NULL
-);
-
-INSERT INTO accounts (name, balance)
-VALUES
-    ('Dara', 1000.00),
-    ('Sokha', 500.00);
-```
-
-Transfer:
+Rollback:
 
 ```sql
 START TRANSACTION;
@@ -1522,25 +1449,17 @@ UPDATE accounts
 SET balance = balance - 100
 WHERE id = 1;
 
-UPDATE accounts
-SET balance = balance + 100
-WHERE id = 2;
-
-COMMIT;
+ROLLBACK;
 ```
 
-## Khmer
-
-Transaction សំខាន់សម្រាប់ Operation ដែលត្រូវជោគជ័យទាំងអស់ ឬបរាជ័យទាំងអស់។
-
-ឧទាហរណ៍ Transfer Money៖
+## ACID
 
 ```text
-Account A - $100
-Account B + $100
+A = Atomicity
+C = Consistency
+I = Isolation
+D = Durability
 ```
-
-បើ Operation មួយបរាជ័យ → `ROLLBACK`។
 
 ---
 
@@ -1551,10 +1470,10 @@ Create:
 ```sql
 DELIMITER //
 
-CREATE PROCEDURE GetAllStudents()
+CREATE PROCEDURE GetUsers()
 BEGIN
     SELECT *
-    FROM students;
+    FROM users;
 END //
 
 DELIMITER ;
@@ -1563,7 +1482,7 @@ DELIMITER ;
 Call:
 
 ```sql
-CALL GetAllStudents();
+CALL GetUsers();
 ```
 
 Procedure with parameter:
@@ -1571,11 +1490,13 @@ Procedure with parameter:
 ```sql
 DELIMITER //
 
-CREATE PROCEDURE GetStudentById(IN student_id INT)
+CREATE PROCEDURE GetUserById(
+    IN user_id INT
+)
 BEGIN
     SELECT *
-    FROM students
-    WHERE id = student_id;
+    FROM users
+    WHERE id = user_id;
 END //
 
 DELIMITER ;
@@ -1584,36 +1505,32 @@ DELIMITER ;
 Call:
 
 ```sql
-CALL GetStudentById(1);
+CALL GetUserById(1);
 ```
 
 Drop:
 
 ```sql
-DROP PROCEDURE GetAllStudents;
+DROP PROCEDURE GetUsers;
 ```
-
-## Khmer
-
-Stored Procedure គឺជា SQL Logic ដែលរក្សាទុកក្នុង Database ហើយអាចហៅប្រើឡើងវិញ។
 
 ---
 
-# 33. Functions
+# 33. Stored Functions
 
-Create a function:
+Create:
 
 ```sql
 DELIMITER //
 
-CREATE FUNCTION AddTax(
-    amount DECIMAL(10,2),
-    tax_rate DECIMAL(5,2)
+CREATE FUNCTION AddNumbers(
+    a INT,
+    b INT
 )
-RETURNS DECIMAL(10,2)
+RETURNS INT
 DETERMINISTIC
 BEGIN
-    RETURN amount + (amount * tax_rate / 100);
+    RETURN a + b;
 END //
 
 DELIMITER ;
@@ -1622,39 +1539,35 @@ DELIMITER ;
 Use:
 
 ```sql
-SELECT AddTax(100, 10);
+SELECT AddNumbers(10, 20);
 ```
 
 Result:
 
 ```text
-110.00
+30
 ```
 
 Drop:
 
 ```sql
-DROP FUNCTION AddTax;
+DROP FUNCTION AddNumbers;
 ```
-
-## Khmer
-
-Function បង្កើត Logic ដែល Return តម្លៃមួយ។
 
 ---
 
 # 34. Triggers
 
-A trigger automatically runs when an event happens.
+Triggers execute automatically when an event occurs.
 
 Example audit table:
 
 ```sql
-CREATE TABLE student_audit (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    student_id INT NOT NULL,
-    action VARCHAR(50) NOT NULL,
-    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE user_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    action VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
@@ -1663,12 +1576,18 @@ Create trigger:
 ```sql
 DELIMITER //
 
-CREATE TRIGGER after_student_insert
-AFTER INSERT ON students
+CREATE TRIGGER after_user_insert
+AFTER INSERT ON users
 FOR EACH ROW
 BEGIN
-    INSERT INTO student_audit (student_id, action)
-    VALUES (NEW.id, 'INSERT');
+    INSERT INTO user_logs (
+        user_id,
+        action
+    )
+    VALUES (
+        NEW.id,
+        'INSERT'
+    );
 END //
 
 DELIMITER ;
@@ -1677,46 +1596,44 @@ DELIMITER ;
 Insert:
 
 ```sql
-INSERT INTO students (name, age, gender)
-VALUES ('Kanha', 20, 'Female');
+INSERT INTO users (
+    name,
+    email,
+    age
+)
+VALUES (
+    'Test User',
+    'test@gmail.com',
+    25
+);
 ```
 
 Check:
 
 ```sql
 SELECT *
-FROM student_audit;
-```
-
-## Khmer
-
-Trigger គឺ Logic ដែល Database ដំណើរការដោយស្វ័យប្រវត្តិ ពេលមាន Event ដូចជា:
-
-```text
-INSERT
-UPDATE
-DELETE
+FROM user_logs;
 ```
 
 ---
 
 # 35. Events
 
-Events allow MySQL to run scheduled SQL.
+Events allow scheduled SQL operations.
 
-Enable event scheduler:
+Enable scheduler:
 
 ```sql
 SET GLOBAL event_scheduler = ON;
 ```
 
-Example:
+Create event:
 
 ```sql
-CREATE EVENT delete_old_audit
+CREATE EVENT delete_old_logs
 ON SCHEDULE EVERY 1 DAY
 DO
-    DELETE FROM student_audit
+    DELETE FROM user_logs
     WHERE created_at < NOW() - INTERVAL 30 DAY;
 ```
 
@@ -1729,30 +1646,24 @@ SHOW EVENTS;
 Drop:
 
 ```sql
-DROP EVENT delete_old_audit;
+DROP EVENT delete_old_logs;
 ```
-
-## Khmer
-
-Event ប្រើសម្រាប់ការងារដែលត្រូវ Run តាមពេលវេលា ដោយស្វ័យប្រវត្តិ។
 
 ---
 
 # 36. Window Functions
 
-Window functions calculate values across related rows without collapsing them.
+Window functions calculate values across related rows without grouping them into one row.
 
 Example:
 
 ```sql
 SELECT
     id,
-    customer_id,
-    total,
-    SUM(total) OVER (
-        PARTITION BY customer_id
-    ) AS customer_total
-FROM orders;
+    name,
+    price,
+    AVG(price) OVER () AS average_price
+FROM products;
 ```
 
 Ranking:
@@ -1760,70 +1671,66 @@ Ranking:
 ```sql
 SELECT
     id,
-    customer_id,
-    total,
-    ROW_NUMBER() OVER (
-        PARTITION BY customer_id
-        ORDER BY total DESC
-    ) AS row_number
-FROM orders;
-```
-
-Rank:
-
-```sql
-SELECT
-    id,
-    total,
+    name,
+    price,
     RANK() OVER (
-        ORDER BY total DESC
-    ) AS sales_rank
-FROM orders;
+        ORDER BY price DESC
+    ) AS price_rank
+FROM products;
 ```
 
-Dense rank:
+Row number:
 
 ```sql
 SELECT
     id,
-    total,
-    DENSE_RANK() OVER (
-        ORDER BY total DESC
-    ) AS sales_rank
-FROM orders;
+    name,
+    price,
+    ROW_NUMBER() OVER (
+        ORDER BY price DESC
+    ) AS row_number
+FROM products;
 ```
 
-## Khmer
+Partition:
 
-Window Function អាចគណនា Data តាម Group ដោយមិនបាត់ Row ដើម។
+```sql
+SELECT
+    id,
+    name,
+    category_id,
+    price,
+    RANK() OVER (
+        PARTITION BY category_id
+        ORDER BY price DESC
+    ) AS category_rank
+FROM products;
+```
 
 ---
 
 # 37. JSON
 
-MySQL supports JSON data.
-
-Create table:
+Create JSON column:
 
 ```sql
 CREATE TABLE products_json (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     attributes JSON
 );
 ```
 
-Insert JSON:
+Insert:
 
 ```sql
-INSERT INTO products_json (name, attributes)
+INSERT INTO products_json (
+    name,
+    attributes
+)
 VALUES (
     'Laptop',
-    JSON_OBJECT(
-        'brand', 'Dell',
-        'ram', 16,
-        'storage', 512
-    )
+    '{"brand":"Apple","ram":16,"storage":512}'
 );
 ```
 
@@ -1840,289 +1747,201 @@ Extract:
 
 ```sql
 SELECT
-    name,
-    attributes->>'$.brand' AS brand,
+    attributes->>'$.brand' AS brand
+FROM products_json;
+```
+
+Extract RAM:
+
+```sql
+SELECT
     attributes->>'$.ram' AS ram
 FROM products_json;
 ```
 
-Search:
+Search JSON:
 
 ```sql
 SELECT *
 FROM products_json
-WHERE attributes->>'$.brand' = 'Dell';
+WHERE JSON_EXTRACT(attributes, '$.ram') = 16;
 ```
-
-## Khmer
-
-JSON មានប្រយោជន៍ពេល Data មាន Structure ដែលអាចផ្លាស់ប្តូរ។
-
-ប៉ុន្តែសម្រាប់ Data ដែលមាន Structure ច្បាស់ គួរពិចារណាប្រើ Columns ធម្មតា។
 
 ---
 
-# 38. Common Table Expressions
+# 38. Recursive CTE
 
-Basic:
+Recursive CTEs are useful for hierarchical data.
 
-```sql
-WITH totals AS (
-    SELECT
-        customer_id,
-        SUM(total) AS total_spent
-    FROM orders
-    GROUP BY customer_id
-)
-SELECT *
-FROM totals;
-```
-
-CTE + JOIN:
+Example:
 
 ```sql
-WITH totals AS (
-    SELECT
-        customer_id,
-        SUM(total) AS total_spent
-    FROM orders
-    GROUP BY customer_id
-)
-SELECT
-    c.name,
-    t.total_spent
-FROM customers c
-JOIN totals t
-    ON c.id = t.customer_id;
-```
-
-## Khmer
-
-CTE ជួយបំបែក Query ធំៗទៅជាផ្នែកតូចៗដែលអានងាយ។
-
----
-
-# 39. Recursive CTE
-
-Useful for hierarchical data.
-
-Create categories:
-
-```sql
-CREATE TABLE categories (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE employees (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    parent_id INT NULL,
+    manager_id INT NULL,
 
-    FOREIGN KEY (parent_id)
-        REFERENCES categories(id)
+    FOREIGN KEY (manager_id)
+        REFERENCES employees(id)
 );
 ```
 
 Insert:
 
 ```sql
-INSERT INTO categories (name, parent_id)
+INSERT INTO employees (name, manager_id)
 VALUES
-    ('Electronics', NULL),
-    ('Computers', 1),
-    ('Laptops', 2),
-    ('Gaming Laptops', 3);
+    ('CEO', NULL),
+    ('Manager A', 1),
+    ('Manager B', 1),
+    ('Developer A', 2),
+    ('Developer B', 2),
+    ('Developer C', 3);
 ```
 
 Recursive query:
 
 ```sql
-WITH RECURSIVE category_tree AS (
+WITH RECURSIVE employee_tree AS (
+
     SELECT
         id,
         name,
-        parent_id,
+        manager_id,
         0 AS level
-    FROM categories
-    WHERE parent_id IS NULL
+    FROM employees
+    WHERE manager_id IS NULL
 
     UNION ALL
 
     SELECT
-        c.id,
-        c.name,
-        c.parent_id,
-        ct.level + 1
-    FROM categories c
-    JOIN category_tree ct
-        ON c.parent_id = ct.id
+        e.id,
+        e.name,
+        e.manager_id,
+        et.level + 1
+    FROM employees e
+    INNER JOIN employee_tree et
+        ON e.manager_id = et.id
 )
+
 SELECT *
-FROM category_tree
+FROM employee_tree
 ORDER BY level, id;
-```
-
-## Khmer
-
-Recursive CTE ប្រើសម្រាប់ Data មានទម្រង់ Tree ដូចជា៖
-
-```text
-Electronics
-└── Computers
-    └── Laptops
-        └── Gaming Laptops
 ```
 
 ---
 
-# 40. Query Optimization
+# 39. Query Optimization
 
 Bad:
 
 ```sql
 SELECT *
-FROM orders;
+FROM users;
 ```
 
 Better:
 
 ```sql
-SELECT
-    id,
-    customer_id,
-    total
-FROM orders;
+SELECT id, name, email
+FROM users;
 ```
 
-Instead of:
+Bad:
 
 ```sql
-WHERE YEAR(created_at) = 2026
+SELECT *
+FROM users
+WHERE LOWER(email) = 'john@gmail.com';
 ```
 
-Prefer a range:
+Better:
 
 ```sql
-WHERE created_at >= '2026-01-01'
-  AND created_at < '2027-01-01';
+SELECT id, name, email
+FROM users
+WHERE email = 'john@gmail.com';
 ```
 
-Why?
+Create an index:
 
-Applying functions to an indexed column can make index usage less effective.
+```sql
+CREATE INDEX idx_users_email
+ON users(email);
+```
 
 ## Avoid unnecessary operations
 
 Avoid:
 
 ```sql
-SELECT DISTINCT *
-FROM huge_table;
+SELECT *
 ```
 
-unless you actually need `DISTINCT`.
+Prefer:
 
-Avoid unnecessary joins.
+```sql
+SELECT id, name, email
+```
 
-Use appropriate indexes.
+Use pagination:
 
-Return only required columns.
+```sql
+SELECT id, name
+FROM users
+ORDER BY id
+LIMIT 20 OFFSET 0;
+```
 
-Use pagination for large datasets.
+For large datasets, keyset pagination can be better:
 
-## Khmer
-
-Optimization មានន័យថា ធ្វើឲ្យ Query:
-
-```text
-លឿន
-ប្រើ RAM តិច
-ប្រើ CPU តិច
-ប្រើ Disk I/O តិច
+```sql
+SELECT id, name
+FROM users
+WHERE id > 1000
+ORDER BY id
+LIMIT 20;
 ```
 
 ---
 
-# 41. EXPLAIN
+# 40. EXPLAIN
 
-Use:
+Use `EXPLAIN` to understand query execution.
 
 ```sql
 EXPLAIN
 SELECT *
-FROM students
-WHERE name = 'Dara';
+FROM users
+WHERE email = 'john@gmail.com';
 ```
 
-For more detailed execution information:
+For actual execution analysis:
 
 ```sql
 EXPLAIN ANALYZE
 SELECT *
-FROM students
-WHERE name = 'Dara';
+FROM users
+WHERE email = 'john@gmail.com';
 ```
 
-Look for information such as:
+Check:
 
 ```text
-access type
-possible keys
-chosen key
-estimated rows
-execution details
+type
+possible_keys
+key
+rows
+Extra
 ```
 
-## Khmer
-
-`EXPLAIN` ជួយយើងយល់ថា MySQL ដំណើរការ Query ដោយរបៀបណា។
-
-ប្រើវាពេល Query យឺត។
+A good index can change a query from scanning many rows to finding matching rows efficiently.
 
 ---
 
-# 42. Normalization
+# 41. Database Normalization
 
-Normalization helps reduce duplicated data and improve data consistency.
-
-## Bad design
-
-```text
-orders
-
-id
-customer_name
-customer_email
-product_name
-product_price
-```
-
-If the same customer makes 100 orders, customer information is duplicated.
-
-## Better design
-
-```text
-customers
----------
-id
-name
-email
-
-products
---------
-id
-name
-price
-
-orders
-------
-id
-customer_id
-created_at
-
-order_items
------------
-order_id
-product_id
-quantity
-price
-```
+Normalization reduces duplicated data.
 
 ## First Normal Form — 1NF
 
@@ -2131,114 +1950,58 @@ Each column should contain atomic values.
 Bad:
 
 ```text
-phone = "012345678,098765432"
+id | name | phones
+1  | John | 123,456,789
 ```
 
 Better:
 
 ```text
-customer_phones
----------------
-customer_id
-phone
+users
+id | name
+
+user_phones
+id | user_id | phone
 ```
 
 ## Second Normal Form — 2NF
 
-Remove partial dependencies from composite keys.
+Every non-key column should depend on the whole primary key.
 
 ## Third Normal Form — 3NF
 
-Remove dependencies where non-key columns depend on other non-key columns.
+Non-key columns should not depend on other non-key columns.
 
-## Khmer
-
-Normalization គឺការរៀបចំ Database ដើម្បីកាត់បន្ថយ Data ស្ទួន និងធ្វើឲ្យ Data មានភាពត្រឹមត្រូវ។
-
----
-
-# 43. Security
-
-Never build SQL like this:
-
-```text
-"SELECT * FROM users WHERE username = '" + username + "'"
-```
-
-This can lead to SQL Injection.
-
-## Use prepared statements
-
-Example concept:
-
-```sql
-SELECT *
-FROM users
-WHERE email = ?;
-```
-
-Application code supplies the value separately.
-
-For example in Node.js:
-
-```javascript
-const [rows] = await connection.execute(
-    'SELECT * FROM users WHERE email = ?',
-    [email]
-);
-```
-
-## Passwords
-
-Never store plain-text passwords.
+Example:
 
 Bad:
 
 ```text
-password = "mypassword123"
+user_id
+user_name
+department_id
+department_name
 ```
 
-Use a password hashing algorithm from your application framework/library, such as:
+Better:
 
 ```text
-Argon2id
-bcrypt
-```
-
-Store the resulting hash, not the original password.
-
-## Khmer
-
-កុំរក្សាទុក Password ជា Plain Text។
-
-កុំបង្កើត SQL ដោយបញ្ចូល User Input ដោយផ្ទាល់។
-
-ត្រូវប្រើ:
-
-```text
-Prepared Statements
-Password Hashing
-Least Privilege
+users
+departments
 ```
 
 ---
 
-# 44. Users and Privileges
+# 42. Users and Privileges
 
 Create user:
 
 ```sql
 CREATE USER 'app_user'@'localhost'
-IDENTIFIED BY 'StrongPasswordHere';
+IDENTIFIED BY 'StrongPassword_123!';
 ```
 
-Create database:
-
-```sql
-CREATE DATABASE shop;
-```
-
-Grant permissions:
+Grant privileges:
 
 ```sql
 GRANT SELECT, INSERT, UPDATE, DELETE
@@ -2249,10 +2012,11 @@ TO 'app_user'@'localhost';
 Show grants:
 
 ```sql
-SHOW GRANTS FOR 'app_user'@'localhost';
+SHOW GRANTS
+FOR 'app_user'@'localhost';
 ```
 
-Remove privileges:
+Remove privilege:
 
 ```sql
 REVOKE DELETE
@@ -2266,473 +2030,295 @@ Drop user:
 DROP USER 'app_user'@'localhost';
 ```
 
-## Best Practice
+---
 
-Do not use:
+# 43. Security
+
+## Never store passwords as plain text
+
+Bad:
 
 ```text
-root
+password = "123456"
 ```
 
-for an application.
+Application passwords should be hashed using a password hashing algorithm such as:
 
-Create a dedicated application user with only the permissions it needs.
+```text
+Argon2id
+bcrypt
+scrypt
+```
 
-## Khmer
+## Use prepared statements
 
-Application មិនគួរប្រើ `root` User ទេ។
+Bad:
 
-គួរបង្កើត User ផ្ទាល់ខ្លួន ហើយផ្តល់ Permission ត្រឹមតែអ្វីដែល Application ត្រូវការ។
+```text
+SELECT * FROM users WHERE email = '" + email + "'
+```
+
+This can lead to SQL injection.
+
+Better:
+
+```sql
+SELECT *
+FROM users
+WHERE email = ?;
+```
+
+Application code should bind the value separately.
+
+## Principle of Least Privilege
+
+Do not give application users:
+
+```text
+ALL PRIVILEGES
+```
+
+unless there is a real reason.
+
+Prefer:
+
+```sql
+GRANT SELECT, INSERT, UPDATE, DELETE
+ON shop.*
+TO 'app_user'@'localhost';
+```
 
 ---
 
-# 45. Backup and Restore
+# 44. Backup and Restore
 
-## Backup with mysqldump
+## Backup
 
-```bash
-mysqldump -u root -p school > school.sql
-```
-
-## Backup a specific database
+Using `mysqldump`:
 
 ```bash
-mysqldump -u root -p school > school_backup.sql
+mysqldump -u root -p shop > shop_backup.sql
 ```
 
-## Restore
-
-Create database:
-
-```sql
-CREATE DATABASE school;
-```
-
-Then:
-
-```bash
-mysql -u root -p school < school.sql
-```
-
-## Backup multiple databases
-
-```bash
-mysqldump -u root -p --databases school shop > databases.sql
-```
-
-## Backup all databases
+Backup all databases:
 
 ```bash
 mysqldump -u root -p --all-databases > all_databases.sql
 ```
 
-## Khmer
+## Restore
 
-Backup គឺសំខាន់ណាស់សម្រាប់ Production Database។
+```bash
+mysql -u root -p shop < shop_backup.sql
+```
 
-គួរមាន:
+If the database does not exist:
+
+```bash
+mysql -u root -p < shop_backup.sql
+```
+
+## Important
+
+Production databases should have:
 
 ```text
-Regular backup
-Off-site backup
+Regular backups
+Off-site backups
 Backup testing
-Recovery plan
+Retention policy
+Recovery procedure
 ```
 
-Backup ដែលមិនធ្លាប់ Test Restore មិនគួរចាត់ទុកថា Reliable ទេ។
+A backup that has never been restored/tested should not be assumed reliable.
 
 ---
 
-# 46. Database Design
+# 45. Database Design
 
-A typical e-commerce database:
+A good database design usually starts with requirements.
+
+Example e-commerce system:
+
+```text
+Users
+  |
+  └── Orders
+        |
+        └── Order Items
+                |
+                └── Products
+                        |
+                        └── Categories
+```
+
+Possible tables:
 
 ```text
 users
------
-id
-name
-email
-password_hash
-
-products
---------
-id
-name
-description
-price
-stock
-
 categories
-----------
-id
-name
-
-product_categories
-------------------
-product_id
-category_id
-
-orders
-------
-id
-user_id
-status
-created_at
-
-order_items
------------
-id
-order_id
-product_id
-quantity
-price
-
-payments
---------
-id
-order_id
-amount
-status
-paid_at
-```
-
-Relationship:
-
-```text
-users
-  |
-  | 1
-  |
-  | N
-orders
-  |
-  | 1
-  |
-  | N
-order_items
-  |
-  | N
-  |
-  | 1
 products
+orders
+order_items
+payments
+addresses
 ```
 
 ---
 
-# 47. Advanced Project
+# 46. Advanced Queries
 
-## E-Commerce Database
-
-Create database:
+## Top 5 Products
 
 ```sql
-CREATE DATABASE ecommerce;
-
-USE ecommerce;
+SELECT
+    id,
+    name,
+    price
+FROM products
+ORDER BY price DESC
+LIMIT 5;
 ```
 
-## Users
+## Products Above Average
 
 ```sql
-CREATE TABLE users (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
-    password_hash VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-        ON UPDATE CURRENT_TIMESTAMP
+SELECT *
+FROM products
+WHERE price > (
+    SELECT AVG(price)
+    FROM products
 );
 ```
 
-## Categories
+## Count Products Per Category
 
 ```sql
-CREATE TABLE categories (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL UNIQUE,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+SELECT
+    c.name,
+    COUNT(p.id) AS total_products
+FROM categories c
+LEFT JOIN products p
+    ON p.category_id = c.id
+GROUP BY c.id, c.name;
 ```
 
-## Products
+## Highest Product Per Category
 
 ```sql
-CREATE TABLE products (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    category_id BIGINT UNSIGNED NULL,
-    name VARCHAR(200) NOT NULL,
-    description TEXT,
-    price DECIMAL(12,2) NOT NULL,
-    stock INT NOT NULL DEFAULT 0,
-    is_active BOOLEAN NOT NULL DEFAULT TRUE,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-        ON UPDATE CURRENT_TIMESTAMP,
-
-    CONSTRAINT fk_products_category
-        FOREIGN KEY (category_id)
-        REFERENCES categories(id)
-        ON DELETE SET NULL,
-
-    CONSTRAINT chk_products_price
-        CHECK (price >= 0),
-
-    CONSTRAINT chk_products_stock
-        CHECK (stock >= 0)
-);
+WITH ranked_products AS (
+    SELECT
+        p.*,
+        RANK() OVER (
+            PARTITION BY category_id
+            ORDER BY price DESC
+        ) AS product_rank
+    FROM products p
+)
+SELECT *
+FROM ranked_products
+WHERE product_rank = 1;
 ```
 
-## Orders
+## Duplicate Emails
 
 ```sql
-CREATE TABLE orders (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    user_id BIGINT UNSIGNED NOT NULL,
-    status VARCHAR(30) NOT NULL DEFAULT 'pending',
-    total_amount DECIMAL(12,2) NOT NULL DEFAULT 0,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
-        ON UPDATE CURRENT_TIMESTAMP,
-
-    CONSTRAINT fk_orders_user
-        FOREIGN KEY (user_id)
-        REFERENCES users(id)
-);
+SELECT
+    email,
+    COUNT(*) AS total
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
 ```
 
-## Order Items
+## Remove Duplicate Data Carefully
+
+First identify duplicates:
 
 ```sql
-CREATE TABLE order_items (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    order_id BIGINT UNSIGNED NOT NULL,
-    product_id BIGINT UNSIGNED NOT NULL,
-    quantity INT NOT NULL,
-    unit_price DECIMAL(12,2) NOT NULL,
-
-    CONSTRAINT fk_order_items_order
-        FOREIGN KEY (order_id)
-        REFERENCES orders(id)
-        ON DELETE CASCADE,
-
-    CONSTRAINT fk_order_items_product
-        FOREIGN KEY (product_id)
-        REFERENCES products(id),
-
-    CONSTRAINT chk_order_items_quantity
-        CHECK (quantity > 0),
-
-    CONSTRAINT chk_order_items_price
-        CHECK (unit_price >= 0)
-);
+SELECT
+    email,
+    COUNT(*) AS total
+FROM users
+GROUP BY email
+HAVING COUNT(*) > 1;
 ```
 
-## Payments
-
-```sql
-CREATE TABLE payments (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    order_id BIGINT UNSIGNED NOT NULL,
-    amount DECIMAL(12,2) NOT NULL,
-    status VARCHAR(30) NOT NULL DEFAULT 'pending',
-    paid_at DATETIME NULL,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-
-    CONSTRAINT fk_payments_order
-        FOREIGN KEY (order_id)
-        REFERENCES orders(id)
-        ON DELETE CASCADE,
-
-    CONSTRAINT chk_payments_amount
-        CHECK (amount >= 0)
-);
-```
+Never blindly delete duplicate rows in production. First determine which record should remain and whether related tables reference those rows.
 
 ---
 
-# 48. Advanced Queries
-
-## Get all products with category
-
-```sql
-SELECT
-    p.id,
-    p.name,
-    p.price,
-    p.stock,
-    c.name AS category_name
-FROM products p
-LEFT JOIN categories c
-    ON p.category_id = c.id;
-```
-
-## Get order summary
-
-```sql
-SELECT
-    o.id AS order_id,
-    u.name AS customer_name,
-    o.status,
-    o.total_amount,
-    o.created_at
-FROM orders o
-JOIN users u
-    ON o.user_id = u.id
-ORDER BY o.created_at DESC;
-```
-
-## Calculate order total
-
-```sql
-SELECT
-    oi.order_id,
-    SUM(oi.quantity * oi.unit_price) AS calculated_total
-FROM order_items oi
-GROUP BY oi.order_id;
-```
-
-## Top-selling products
-
-```sql
-SELECT
-    p.id,
-    p.name,
-    SUM(oi.quantity) AS total_quantity
-FROM order_items oi
-JOIN products p
-    ON oi.product_id = p.id
-GROUP BY p.id, p.name
-ORDER BY total_quantity DESC
-LIMIT 10;
-```
-
-## Revenue by month
-
-```sql
-SELECT
-    YEAR(o.created_at) AS year,
-    MONTH(o.created_at) AS month,
-    SUM(o.total_amount) AS revenue
-FROM orders o
-WHERE o.status = 'completed'
-GROUP BY
-    YEAR(o.created_at),
-    MONTH(o.created_at)
-ORDER BY year, month;
-```
-
-## Customer lifetime value
-
-```sql
-SELECT
-    u.id,
-    u.name,
-    COALESCE(SUM(
-        CASE
-            WHEN o.status = 'completed'
-            THEN o.total_amount
-            ELSE 0
-        END
-    ), 0) AS lifetime_value
-FROM users u
-LEFT JOIN orders o
-    ON u.id = o.user_id
-GROUP BY u.id, u.name
-ORDER BY lifetime_value DESC;
-```
-
----
-
-# 49. Best Practices
+# 47. Best Practices
 
 ## Naming
 
 Use consistent names:
 
 ```text
-snake_case
-```
-
-Good:
-
-```sql
+users
+products
+orders
+order_items
 created_at
 updated_at
-user_id
-order_items
 ```
 
-Avoid mixing:
+Avoid:
 
 ```text
-createdAt
-created_at
-CreatedAt
+tblUser
+tblProducts
+Data1
+TestTable
 ```
 
-within the same project.
-
----
-
-## Always define Primary Keys
-
-Good:
+## Always use Primary Keys
 
 ```sql
-CREATE TABLE users (
-    id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT
-);
+id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY
 ```
-
----
 
 ## Use Foreign Keys
 
-Good:
-
 ```sql
-FOREIGN KEY (user_id)
-REFERENCES users(id)
+FOREIGN KEY (category_id)
+REFERENCES categories(id)
 ```
 
-This protects referential integrity.
+## Use Transactions
 
----
-
-## Use DECIMAL for Money
-
-Good:
+For important multi-step operations:
 
 ```sql
-price DECIMAL(12,2)
+START TRANSACTION;
+
+-- operation 1
+-- operation 2
+-- operation 3
+
+COMMIT;
 ```
 
-Avoid using floating-point types for exact monetary values when exact decimal arithmetic is required.
-
----
-
-## Use UTC consistently for timestamps
-
-For distributed applications, keeping timestamps in UTC and converting them to the user's local timezone at the application/UI layer is usually easier to manage.
-
-Example:
+If something fails:
 
 ```sql
-created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+ROLLBACK;
 ```
 
----
+## Index Carefully
+
+Index columns frequently used in:
+
+```text
+WHERE
+JOIN
+ORDER BY
+GROUP BY
+```
+
+But validate with real query workloads.
 
 ## Avoid SELECT *
-
-Instead of:
-
-```sql
-SELECT *
-FROM users;
-```
 
 Prefer:
 
@@ -2746,375 +2332,305 @@ FROM users;
 
 ---
 
-## Always use WHERE for targeted UPDATE/DELETE
-
-Good:
-
-```sql
-UPDATE users
-SET name = 'Dara'
-WHERE id = 1;
-```
-
-Good:
-
-```sql
-DELETE FROM users
-WHERE id = 1;
-```
-
-Be extremely careful with:
-
-```sql
-UPDATE users
-SET name = 'Dara';
-```
-
-and:
-
-```sql
-DELETE FROM users;
-```
-
----
-
-# 50. SQL Cheat Sheet
+# 48. SQL Cheat Sheet
 
 ## Database
 
 ```sql
-CREATE DATABASE database_name;
+CREATE DATABASE shop;
 
 SHOW DATABASES;
 
-USE database_name;
+USE shop;
 
-DROP DATABASE database_name;
+DROP DATABASE shop;
 ```
 
 ## Table
 
 ```sql
-CREATE TABLE table_name (
-    id INT PRIMARY KEY AUTO_INCREMENT
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL
 );
 
 SHOW TABLES;
 
-DESCRIBE table_name;
+DESCRIBE users;
 
-DROP TABLE table_name;
+DROP TABLE users;
 ```
 
 ## Insert
 
 ```sql
-INSERT INTO table_name (column1, column2)
-VALUES ('value1', 'value2');
+INSERT INTO users (name)
+VALUES ('John');
 ```
 
 ## Select
 
 ```sql
 SELECT *
-FROM table_name;
+FROM users;
 ```
 
 ## Filter
 
 ```sql
 SELECT *
-FROM table_name
-WHERE column1 = 'value';
-```
-
-## Sort
-
-```sql
-SELECT *
-FROM table_name
-ORDER BY column1 DESC;
-```
-
-## Limit
-
-```sql
-SELECT *
-FROM table_name
-LIMIT 10;
+FROM users
+WHERE id = 1;
 ```
 
 ## Update
 
 ```sql
-UPDATE table_name
-SET column1 = 'new_value'
+UPDATE users
+SET name = 'John Doe'
 WHERE id = 1;
 ```
 
 ## Delete
 
 ```sql
-DELETE FROM table_name
+DELETE FROM users
 WHERE id = 1;
+```
+
+## Sort
+
+```sql
+SELECT *
+FROM users
+ORDER BY name ASC;
+```
+
+## Pagination
+
+```sql
+SELECT *
+FROM users
+ORDER BY id
+LIMIT 20 OFFSET 0;
 ```
 
 ## Count
 
 ```sql
 SELECT COUNT(*)
-FROM table_name;
-```
-
-## Sum
-
-```sql
-SELECT SUM(amount)
-FROM payments;
-```
-
-## Average
-
-```sql
-SELECT AVG(amount)
-FROM payments;
+FROM users;
 ```
 
 ## Group
 
 ```sql
 SELECT
-    category_id,
-    COUNT(*) AS total
-FROM products
-GROUP BY category_id;
-```
-
-## Having
-
-```sql
-SELECT
-    category_id,
-    COUNT(*) AS total
-FROM products
-GROUP BY category_id
-HAVING COUNT(*) > 5;
+    age,
+    COUNT(*)
+FROM users
+GROUP BY age;
 ```
 
 ## Join
 
 ```sql
-SELECT
-    a.name,
-    b.total
-FROM customers a
-JOIN orders b
-    ON a.id = b.customer_id;
-```
-
-## Transaction
-
-```sql
-START TRANSACTION;
-
--- SQL operations
-
-COMMIT;
-```
-
-Rollback:
-
-```sql
-ROLLBACK;
+SELECT *
+FROM users u
+JOIN orders o
+    ON o.user_id = u.id;
 ```
 
 ---
 
-# 51. Recommended Learning Path
+# 49. Learning Path
 
-## Beginner
-
-Learn these first:
+Recommended order:
 
 ```text
-1. Database
-2. Table
-3. Data Types
-4. CREATE
-5. INSERT
-6. SELECT
-7. WHERE
-8. ORDER BY
-9. LIMIT
-10. UPDATE
-11. DELETE
-12. NULL
-```
-
-## Intermediate
-
-Then learn:
-
-```text
-1. Primary Keys
-2. Foreign Keys
-3. Relationships
-4. JOIN
-5. GROUP BY
-6. HAVING
-7. Aggregate Functions
-8. String Functions
-9. Date Functions
-10. CASE
-11. Subqueries
+1. SQL Basics
+       ↓
+2. Database / Tables
+       ↓
+3. SELECT
+       ↓
+4. WHERE
+       ↓
+5. INSERT / UPDATE / DELETE
+       ↓
+6. Constraints
+       ↓
+7. Relationships
+       ↓
+8. JOIN
+       ↓
+9. GROUP BY / HAVING
+       ↓
+10. Subqueries
+       ↓
+11. CTE
+       ↓
 12. Views
+       ↓
 13. Indexes
+       ↓
 14. Transactions
-```
-
-## Advanced
-
-Finally learn:
-
-```text
-1. CTE
-2. Recursive CTE
-3. Window Functions
-4. JSON
-5. Stored Procedures
-6. Functions
-7. Triggers
-8. Events
-9. EXPLAIN
-10. Query Optimization
-11. Normalization
-12. Security
-13. Permissions
-14. Backup & Restore
-15. Production Database Design
+       ↓
+15. Stored Procedures
+       ↓
+16. Functions
+       ↓
+17. Triggers
+       ↓
+18. Window Functions
+       ↓
+19. JSON
+       ↓
+20. Optimization
+       ↓
+21. Security
+       ↓
+22. Production
 ```
 
 ---
 
-# 52. MySQL Mental Model
+# 50. MySQL Mental Model
 
-When writing SQL, think in this order:
+Think about MySQL like this:
 
 ```text
-FROM
-  ↓
-JOIN
-  ↓
-WHERE
-  ↓
-GROUP BY
-  ↓
-HAVING
-  ↓
-SELECT
-  ↓
-ORDER BY
-  ↓
-LIMIT
+Application
+     |
+     | SQL Query
+     ↓
+MySQL Server
+     |
+     ↓
+Database
+     |
+     ↓
+Tables
+     |
+     ↓
+Rows + Columns
+     |
+     ↓
+Indexes
+     |
+     ↓
+Storage Engine
 ```
 
 Example:
 
-```sql
-SELECT
-    c.name,
-    COUNT(o.id) AS order_count,
-    SUM(o.total) AS total_spent
-FROM customers c
-LEFT JOIN orders o
-    ON c.id = o.customer_id
-WHERE o.total > 0
-GROUP BY c.id, c.name
-HAVING SUM(o.total) > 100
-ORDER BY total_spent DESC
-LIMIT 10;
+```text
+Node.js / Java / Python / PHP
+              |
+              ↓
+          SQL Query
+              |
+              ↓
+          MySQL Server
+              |
+              ↓
+          users table
 ```
 
 ---
 
-# 53. Real-World MySQL Architecture
+# 51. Real-World Architecture
 
-A typical application can look like:
+Typical web application:
 
 ```text
-                    ┌───────────────┐
-                    │   Frontend    │
-                    │ React / Vue   │
-                    │ Angular / etc │
-                    └───────┬───────┘
-                            │
-                            │ HTTP/HTTPS
-                            ▼
-                    ┌───────────────┐
-                    │      API      │
-                    │ Node / Java   │
-                    │ Go / C# / PHP │
-                    └───────┬───────┘
-                            │
-                            │ SQL
-                            ▼
-                    ┌───────────────┐
-                    │     MySQL     │
-                    │   Database    │
-                    └───────────────┘
+                Client
+                  |
+                  ↓
+              Frontend
+                  |
+                  ↓
+              REST API
+                  |
+                  ↓
+             Backend App
+                  |
+                  ↓
+              MySQL
+                  |
+                  ↓
+              Storage
 ```
 
-## Khmer
-
-Architecture ទូទៅ៖
+Example stack:
 
 ```text
-Frontend
+React
    ↓
-Backend / API
+Node.js
+   ↓
+Express
    ↓
 MySQL
 ```
 
-Frontend មិនគួរភ្ជាប់ MySQL ដោយផ្ទាល់ទេ។
-
-ត្រូវប្រើ Backend/API ជាអ្នកគ្រប់គ្រង Database។
-
----
-
-# 54. Production Checklist
-
-Before deploying MySQL to production:
+Another:
 
 ```text
-[ ] Use strong database passwords
-[ ] Do not use root for application
-[ ] Use least-privilege accounts
-[ ] Use prepared statements
-[ ] Validate user input
-[ ] Add appropriate indexes
-[ ] Review slow queries
-[ ] Use transactions where necessary
-[ ] Configure backups
-[ ] Test restoring backups
-[ ] Monitor database performance
-[ ] Monitor disk usage
-[ ] Monitor connections
-[ ] Use SSL/TLS where appropriate
-[ ] Protect database credentials
-[ ] Never commit passwords to Git
+Flutter
+   ↓
+REST API
+   ↓
+Spring Boot
+   ↓
+MySQL
+```
+
+Another:
+
+```text
+Next.js
+   ↓
+API
+   ↓
+MySQL
 ```
 
 ---
 
-# 55. Environment Variables
+# 52. Production Checklist
 
-Never put database passwords directly in source code.
+Before production:
+
+```text
+[ ] Primary keys
+[ ] Foreign keys
+[ ] Proper indexes
+[ ] Constraints
+[ ] Transactions
+[ ] Backup strategy
+[ ] Restore testing
+[ ] Least-privilege users
+[ ] Strong authentication
+[ ] Prepared statements
+[ ] Input validation
+[ ] Query optimization
+[ ] Monitoring
+[ ] Error logging
+[ ] Migration strategy
+[ ] Connection pooling
+```
+
+---
+
+# 53. Environment Variables
+
+Never hard-code production credentials.
 
 Bad:
 
 ```javascript
-const password = "MySecretPassword";
+const password = "mySecretPassword";
 ```
 
 Better:
@@ -3122,12 +2638,26 @@ Better:
 ```env
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=ecommerce
+DB_NAME=shop
 DB_USER=app_user
 DB_PASSWORD=your_password
 ```
 
-Then your application reads environment variables.
+Example Node.js configuration:
+
+```javascript
+const mysql = require("mysql2/promise");
+
+const pool = mysql.createPool({
+    host: process.env.DB_HOST,
+    port: Number(process.env.DB_PORT || 3306),
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME
+});
+
+module.exports = pool;
+```
 
 Never commit:
 
@@ -3135,7 +2665,7 @@ Never commit:
 .env
 ```
 
-Add to `.gitignore`:
+Add it to `.gitignore`:
 
 ```gitignore
 .env
@@ -3143,154 +2673,228 @@ Add to `.gitignore`:
 !.env.example
 ```
 
-Create:
-
-```text
-.env.example
-```
-
 Example:
 
 ```env
 DB_HOST=localhost
 DB_PORT=3306
-DB_NAME=ecommerce
+DB_NAME=shop
 DB_USER=app_user
 DB_PASSWORD=
 ```
 
 ---
 
-# 56. Example Project Structure
+# 54. Project Structure
+
+Example backend project:
 
 ```text
-my-mysql-project/
+my-project/
 │
-├── README.md
-├── .gitignore
-├── .env.example
+├── src/
+│   ├── config/
+│   │   └── database.js
+│   │
+│   ├── controllers/
+│   │   └── user.controller.js
+│   │
+│   ├── services/
+│   │   └── user.service.js
+│   │
+│   ├── repositories/
+│   │   └── user.repository.js
+│   │
+│   ├── routes/
+│   │   └── user.routes.js
+│   │
+│   └── app.js
 │
 ├── database/
 │   ├── migrations/
-│   │   ├── 001_create_users.sql
-│   │   ├── 002_create_products.sql
-│   │   └── 003_create_orders.sql
-│   │
 │   ├── seeds/
-│   │   └── development.sql
-│   │
-│   └── queries/
-│       ├── users.sql
-│       ├── products.sql
-│       └── orders.sql
+│   └── schema.sql
 │
-└── docs/
-    ├── database-design.md
-    └── api-database.md
+├── .env
+├── .env.example
+├── .gitignore
+└── README.md
 ```
-
-## Khmer
-
-ការរៀបចំ Folder ឲ្យច្បាស់ជួយឲ្យ Project ងាយ Maintenance និងធ្វើការជាមួយ Team។
 
 ---
 
-# 57. Complete Example
+# 55. Complete E-Commerce Example
 
-Here is a small complete MySQL project.
+This section creates a small but realistic e-commerce database.
 
 ## Step 1 — Database
 
 ```sql
-CREATE DATABASE shop;
+CREATE DATABASE IF NOT EXISTS ecommerce;
 
-USE shop;
+USE ecommerce;
 ```
+
+---
 
 ## Step 2 — Users
 
 ```sql
 CREATE TABLE users (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
-    email VARCHAR(255) NOT NULL UNIQUE,
+    email VARCHAR(150) NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
 
-## Step 3 — Products
-
-```sql
-CREATE TABLE products (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(150) NOT NULL,
-    price DECIMAL(10,2) NOT NULL,
-    stock INT NOT NULL DEFAULT 0
-);
-```
-
-## Step 4 — Orders
-
-```sql
-CREATE TABLE orders (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    user_id INT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
-    FOREIGN KEY (user_id)
-        REFERENCES users(id)
-);
-```
-
-## Step 5 — Order Items
-
-```sql
-CREATE TABLE order_items (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    order_id INT NOT NULL,
-    product_id INT NOT NULL,
-    quantity INT NOT NULL,
-    price DECIMAL(10,2) NOT NULL,
-
-    FOREIGN KEY (order_id)
-        REFERENCES orders(id)
-        ON DELETE CASCADE,
-
-    FOREIGN KEY (product_id)
-        REFERENCES products(id)
-);
-```
-
-## Step 6 — Insert Users
+Insert:
 
 ```sql
 INSERT INTO users (name, email)
 VALUES
-    ('Dara', 'dara@example.com'),
-    ('Sokha', 'sokha@example.com'),
-    ('Bopha', 'bopha@example.com');
+    ('John Doe', 'john@example.com'),
+    ('Anna Smith', 'anna@example.com'),
+    ('Dara Kim', 'dara@example.com');
 ```
 
-## Step 7 — Insert Products
+---
+
+## Step 3 — Categories
 
 ```sql
-INSERT INTO products (name, price, stock)
+CREATE TABLE categories (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE
+);
+```
+
+Insert:
+
+```sql
+INSERT INTO categories (name)
 VALUES
-    ('Laptop', 1200.00, 10),
-    ('Mouse', 25.00, 50),
-    ('Keyboard', 45.00, 30);
+    ('Laptop'),
+    ('Phone'),
+    ('Accessory');
 ```
 
-## Step 8 — Create Order
+---
+
+## Step 4 — Products
 
 ```sql
-INSERT INTO orders (user_id)
-VALUES (1);
+CREATE TABLE products (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    category_id BIGINT UNSIGNED NULL,
+    name VARCHAR(150) NOT NULL,
+    description TEXT,
+    price DECIMAL(12,2) NOT NULL,
+    stock INT UNSIGNED NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_products_category
+        FOREIGN KEY (category_id)
+        REFERENCES categories(id)
+        ON DELETE SET NULL
+        ON UPDATE CASCADE
+);
 ```
 
-## Step 9 — Add Order Items
+Insert:
 
 ```sql
+INSERT INTO products (
+    category_id,
+    name,
+    description,
+    price,
+    stock
+)
+VALUES
+    (1, 'MacBook Pro', 'Apple laptop', 1999.99, 10),
+    (1, 'Dell XPS', 'Dell laptop', 1499.99, 15),
+    (2, 'iPhone', 'Apple smartphone', 999.99, 20),
+    (2, 'Samsung Galaxy', 'Samsung smartphone', 899.99, 25),
+    (3, 'Wireless Mouse', 'Bluetooth mouse', 49.99, 50);
+```
+
+---
+
+## Step 5 — Orders
+
+```sql
+CREATE TABLE orders (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id BIGINT UNSIGNED NOT NULL,
+    status ENUM(
+        'pending',
+        'paid',
+        'shipped',
+        'completed',
+        'cancelled'
+    ) NOT NULL DEFAULT 'pending',
+    total_amount DECIMAL(12,2) NOT NULL DEFAULT 0,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_orders_user
+        FOREIGN KEY (user_id)
+        REFERENCES users(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+);
+```
+
+---
+
+## Step 6 — Order Items
+
+```sql
+CREATE TABLE order_items (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    order_id BIGINT UNSIGNED NOT NULL,
+    product_id BIGINT UNSIGNED NOT NULL,
+    quantity INT UNSIGNED NOT NULL,
+    price DECIMAL(12,2) NOT NULL,
+
+    CONSTRAINT fk_order_items_order
+        FOREIGN KEY (order_id)
+        REFERENCES orders(id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+
+    CONSTRAINT fk_order_items_product
+        FOREIGN KEY (product_id)
+        REFERENCES products(id)
+        ON DELETE RESTRICT
+        ON UPDATE CASCADE
+);
+```
+
+Notice that `price` is stored in `order_items`.
+
+This is useful because product prices can change later while historical orders should keep the price paid at the time of purchase.
+
+---
+
+## Step 7 — Create an Order
+
+```sql
+START TRANSACTION;
+
+INSERT INTO orders (
+    user_id,
+    status,
+    total_amount
+)
+VALUES (
+    1,
+    'pending',
+    2049.98
+);
+
+SET @order_id = LAST_INSERT_ID();
+
 INSERT INTO order_items (
     order_id,
     product_id,
@@ -3298,30 +2902,44 @@ INSERT INTO order_items (
     price
 )
 VALUES
-    (1, 1, 1, 1200.00),
-    (1, 2, 2, 25.00);
+    (@order_id, 1, 1, 1999.99),
+    (@order_id, 5, 1, 49.99);
+
+UPDATE products
+SET stock = stock - 1
+WHERE id = 1
+  AND stock >= 1;
+
+UPDATE products
+SET stock = stock - 1
+WHERE id = 5
+  AND stock >= 1;
+
+COMMIT;
 ```
 
-## Step 10 — Calculate Order Total
+In production application code, stock updates should also be checked carefully so an order cannot succeed if the requested quantity is unavailable.
+
+---
+
+## Step 8 — Get Orders
 
 ```sql
 SELECT
-    order_id,
-    SUM(quantity * price) AS total
-FROM order_items
-WHERE order_id = 1
-GROUP BY order_id;
+    o.id AS order_id,
+    u.name AS customer,
+    o.status,
+    o.total_amount,
+    o.created_at
+FROM orders o
+INNER JOIN users u
+    ON o.user_id = u.id
+ORDER BY o.created_at DESC;
 ```
 
-Result:
+---
 
-```text
-order_id | total
----------|-------
-1        | 1250.00
-```
-
-## Step 11 — Show Order
+## Step 9 — Order Details
 
 ```sql
 SELECT
@@ -3332,271 +2950,410 @@ SELECT
     oi.price,
     oi.quantity * oi.price AS subtotal
 FROM orders o
-JOIN users u
+INNER JOIN users u
     ON o.user_id = u.id
-JOIN order_items oi
-    ON o.id = oi.order_id
-JOIN products p
-    ON oi.product_id = p.id
-WHERE o.id = 1;
+INNER JOIN order_items oi
+    ON oi.order_id = o.id
+INNER JOIN products p
+    ON p.id = oi.product_id
+ORDER BY o.id DESC;
 ```
 
 ---
 
-# 58. Most Important SQL Commands
-
-Memorize these:
+## Step 10 — Customer Spending
 
 ```sql
-CREATE DATABASE
-DROP DATABASE
-
-CREATE TABLE
-ALTER TABLE
-DROP TABLE
-
-INSERT INTO
 SELECT
-UPDATE
-DELETE
-
-WHERE
-AND
-OR
-IN
-BETWEEN
-LIKE
-IS NULL
-
-ORDER BY
-GROUP BY
-HAVING
-LIMIT
-
-INNER JOIN
-LEFT JOIN
-RIGHT JOIN
-
-COUNT
-SUM
-AVG
-MIN
-MAX
-
-CASE
-COALESCE
-
-CREATE INDEX
-DROP INDEX
-
-CREATE VIEW
-DROP VIEW
-
-START TRANSACTION
-COMMIT
-ROLLBACK
-
-CREATE USER
-GRANT
-REVOKE
-DROP USER
-
-EXPLAIN
-EXPLAIN ANALYZE
+    u.id,
+    u.name,
+    COUNT(o.id) AS total_orders,
+    COALESCE(SUM(o.total_amount), 0) AS total_spent
+FROM users u
+LEFT JOIN orders o
+    ON o.user_id = u.id
+GROUP BY u.id, u.name
+ORDER BY total_spent DESC;
 ```
 
 ---
 
-# 59. Final MySQL Roadmap
+## Step 11 — Best-Selling Products
+
+```sql
+SELECT
+    p.id,
+    p.name,
+    SUM(oi.quantity) AS total_quantity_sold,
+    SUM(oi.quantity * oi.price) AS revenue
+FROM order_items oi
+INNER JOIN products p
+    ON p.id = oi.product_id
+INNER JOIN orders o
+    ON o.id = oi.order_id
+WHERE o.status IN ('paid', 'shipped', 'completed')
+GROUP BY p.id, p.name
+ORDER BY total_quantity_sold DESC;
+```
+
+---
+
+## Step 12 — Products With Low Stock
+
+```sql
+SELECT
+    id,
+    name,
+    stock
+FROM products
+WHERE stock < 10
+ORDER BY stock ASC;
+```
+
+---
+
+# 56. Final Roadmap
 
 ```text
-                         MYSQL
-                           │
-          ┌────────────────┴────────────────┐
-          │                                 │
-       BEGINNER                         INTERMEDIATE
-          │                                 │
-     Database                         Relationships
-     Tables                           JOIN
-     Data Types                       GROUP BY
-     INSERT                           HAVING
-     SELECT                           Functions
-     WHERE                            Subqueries
-     UPDATE                           Views
-     DELETE                           Indexes
-     LIMIT                            Transactions
-          │                                 │
-          └────────────────┬────────────────┘
-                           │
-                        ADVANCED
-                           │
-              ┌────────────┼────────────┐
-              │            │            │
-             CTE       Window Func     JSON
-              │            │            │
-          Recursive     Ranking      Documents
-              │            │            │
-              └────────────┼────────────┘
-                           │
-                     PERFORMANCE
-                           │
-                    EXPLAIN
-                    Indexing
-                    Optimization
-                           │
-                       SECURITY
-                           │
-                  Users / Privileges
-                  Prepared Statements
-                  Backups
-                           │
-                      PRODUCTION
-                           │
-                  Database Architecture
-                  Monitoring
-                  Recovery
-                  Scaling
+BEGINNER
+│
+├── Database
+├── Tables
+├── Data Types
+├── INSERT
+├── SELECT
+├── WHERE
+├── ORDER BY
+├── LIMIT
+├── UPDATE
+├── DELETE
+│
+INTERMEDIATE
+│
+├── Constraints
+├── Primary Keys
+├── Foreign Keys
+├── Relationships
+├── JOIN
+├── GROUP BY
+├── HAVING
+├── Aggregate Functions
+├── Subqueries
+├── Views
+├── CTE
+├── Transactions
+├── Indexes
+│
+ADVANCED
+│
+├── Stored Procedures
+├── Stored Functions
+├── Triggers
+├── Events
+├── Window Functions
+├── JSON
+├── Recursive CTE
+├── Query Optimization
+├── EXPLAIN
+├── Normalization
+├── Security
+├── Backup
+└── Production Architecture
 ```
 
 ---
 
-# 60. Conclusion
+# 57. Practice Projects
 
-MySQL is much more than simply writing:
+## Beginner
 
-```sql
-SELECT * FROM users;
+Build:
+
+```text
+1. Student Database
+2. Employee Database
+3. Library Database
+4. School Database
 ```
 
-A professional MySQL developer should understand:
+Practice:
+
+```text
+CREATE
+INSERT
+SELECT
+WHERE
+UPDATE
+DELETE
+ORDER BY
+LIMIT
+```
+
+---
+
+## Intermediate
+
+Build:
+
+```text
+1. Inventory System
+2. Restaurant System
+3. Hospital System
+4. Course Management System
+5. Banking Database
+```
+
+Practice:
+
+```text
+JOIN
+FOREIGN KEY
+GROUP BY
+HAVING
+SUBQUERY
+CTE
+VIEW
+INDEX
+TRANSACTION
+```
+
+---
+
+## Advanced
+
+Build:
+
+```text
+1. E-Commerce
+2. Banking Platform
+3. Hotel Booking System
+4. Food Delivery System
+5. Social Media Database
+6. Learning Management System
+7. Warehouse Management System
+```
+
+Practice:
+
+```text
+Transactions
+Indexes
+Window Functions
+JSON
+Stored Procedures
+Triggers
+Query Optimization
+Security
+Backup
+Database Architecture
+```
+
+---
+
+# 58. Conclusion
+
+MySQL is one of the most important relational databases for backend and full-stack development.
+
+The most important concepts to master are:
 
 ```text
 SQL
-    ↓
-Database Design
-    ↓
-Relationships
-    ↓
-Indexes
-    ↓
-Transactions
-    ↓
-Security
-    ↓
-Optimization
-    ↓
-Backup & Recovery
-    ↓
-Production Architecture
+│
+├── SELECT
+├── INSERT
+├── UPDATE
+├── DELETE
+│
+├── WHERE
+├── ORDER BY
+├── GROUP BY
+├── HAVING
+│
+├── JOIN
+├── Subqueries
+├── CTE
+│
+├── Constraints
+├── Relationships
+├── Indexes
+│
+├── Transactions
+├── Views
+├── Procedures
+├── Functions
+├── Triggers
+│
+├── Window Functions
+├── JSON
+├── Recursive CTE
+│
+├── Optimization
+├── EXPLAIN
+├── Security
+└── Backup
 ```
 
-## Khmer Summary
+## Final Advice
 
-បើចង់រៀន MySQL ពី Beginner ទៅ Advanced គួររៀនតាមលំដាប់៖
+Do not try to memorize every SQL command.
+
+Instead, understand:
 
 ```text
-1. Database
-2. Table
-3. CRUD
-4. WHERE
-5. JOIN
-6. GROUP BY
-7. Relationships
-8. Constraints
-9. Index
-10. Transaction
-11. Subquery
-12. CTE
-13. Window Function
-14. JSON
-15. Stored Procedure
-16. Trigger
-17. Security
-18. EXPLAIN
-19. Optimization
-20. Backup
-21. Production Database Design
+How data is modeled
+        ↓
+How tables are related
+        ↓
+How data is queried
+        ↓
+How queries are optimized
+        ↓
+How transactions work
+        ↓
+How data is protected
+        ↓
+How databases operate in production
+```
+
+Once you understand these concepts, you can work with MySQL in:
+
+```text
+Node.js
+Java
+Spring Boot
+Python
+Django
+PHP
+Laravel
+C#
+.NET
+Go
+Ruby
+Ruby on Rails
+Kotlin
+Android
+Flutter
+React
+Next.js
 ```
 
 ---
 
-# 🚀 Practice Projects
+## MySQL Quick Reference
 
-After learning this README, build these projects:
+```sql
+-- Database
+CREATE DATABASE shop;
+USE shop;
+SHOW DATABASES;
 
-### Beginner
+-- Table
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) UNIQUE
+);
 
-```text
-1. Student Management System
-2. Library Management System
-3. Employee Management System
-```
+-- Insert
+INSERT INTO users (name, email)
+VALUES ('John', 'john@example.com');
 
-### Intermediate
+-- Read
+SELECT *
+FROM users;
 
-```text
-1. Inventory Management System
-2. Restaurant Management System
-3. School Management System
-4. Hospital Management System
-```
+-- Filter
+SELECT *
+FROM users
+WHERE id = 1;
 
-### Advanced
+-- Update
+UPDATE users
+SET name = 'John Doe'
+WHERE id = 1;
 
-```text
-1. E-Commerce System
-2. Banking System
-3. Food Delivery System
-4. Hotel Booking System
-5. Learning Management System
-6. Point of Sale System
-7. Multi-vendor Marketplace
+-- Delete
+DELETE FROM users
+WHERE id = 1;
+
+-- Sort
+SELECT *
+FROM users
+ORDER BY name ASC;
+
+-- Count
+SELECT COUNT(*)
+FROM users;
+
+-- Group
+SELECT
+    name,
+    COUNT(*)
+FROM users
+GROUP BY name;
+
+-- Join
+SELECT *
+FROM users u
+JOIN orders o
+    ON o.user_id = u.id;
+
+-- Index
+CREATE INDEX idx_users_email
+ON users(email);
+
+-- Transaction
+START TRANSACTION;
+
+-- SQL operations...
+
+COMMIT;
+
+-- Rollback
+ROLLBACK;
 ```
 
 ---
 
-# ⭐ Recommended Skill Order
+## MySQL Mastery Checklist
 
 ```text
-SQL Basics
-   ↓
-CRUD
-   ↓
-Constraints
-   ↓
-Relationships
-   ↓
-JOIN
-   ↓
-Aggregation
-   ↓
-Subqueries
-   ↓
-CTE
-   ↓
-Indexes
-   ↓
-Transactions
-   ↓
-Views
-   ↓
-Window Functions
-   ↓
-Stored Procedures
-   ↓
-Triggers
-   ↓
-JSON
-   ↓
-EXPLAIN
-   ↓
-Optimization
-   ↓
-Security
-   ↓
-Backup / Recovery
-   ↓
-Production Database Architecture
+[ ] I understand databases
+[ ] I understand tables
+[ ] I understand rows and columns
+[ ] I understand data types
+[ ] I can create databases
+[ ] I can create tables
+[ ] I can insert data
+[ ] I can query data
+[ ] I can filter data
+[ ] I can update data
+[ ] I can delete data
+[ ] I understand primary keys
+[ ] I understand foreign keys
+[ ] I understand relationships
+[ ] I understand JOIN
+[ ] I understand GROUP BY
+[ ] I understand HAVING
+[ ] I understand subqueries
+[ ] I understand CTE
+[ ] I understand views
+[ ] I understand indexes
+[ ] I understand transactions
+[ ] I understand stored procedures
+[ ] I understand functions
+[ ] I understand triggers
+[ ] I understand events
+[ ] I understand window functions
+[ ] I understand JSON
+[ ] I understand recursive CTE
+[ ] I can use EXPLAIN
+[ ] I understand normalization
+[ ] I understand database security
+[ ] I can create backups
+[ ] I can restore backups
+[ ] I can design production databases
+[ ] I can optimize SQL queries
 ```
 
 ---
@@ -3609,10 +3366,6 @@ This documentation can be used for learning, personal projects, and GitHub docum
 
 ## Author
 
-**MySQL Beginner → Advanced Learning Guide**
+Created as a **MySQL Beginner → Advanced learning reference** with English + Khmer explanations.
 
-Made for developers who want to learn MySQL step by step.
-
-**English + Khmer 🇰🇭**
-
-Happy Learning! 🚀
+⭐ If this guide helps you, consider starring the repository.
